@@ -80,46 +80,46 @@
 #define меняло std::swap
 #define отщипнуть get
 
-#define сладить sort,
-#define почин begin,
-#define хана end,
-#define размах sizeof,
-#define поворотить reverse,
-#define попятная_рисовка reverse_copy,
-#define руби_пополам binary_search,
-#define волочить move,
-#define сыскать find,
-#define свергнуть advance ,
-#define срисовать copy,
-#define срисовать_ли copy_if,
-#define переворошить transform,
-#define сотворять generate,
-#define изгнать remove,
-#define изгнать_ли remove_if,
-#define подменить replace,
-#define подменить_ли replace_if,
-#define махнуть swap,
-#define махнуть_ли swap_if,
-#define энный_молодец nth_element,
-#define сыскать_ли find_if,
-#define сыскать_первого_молодца find_first_of,
-#define несравнимый unique,
-#define слаженный_ли is_sorted,
-#define сплотить merge,
-#define могущественный max,
-#define ничтожный min,
-#define всякий for_each,
-#define счесть count,
-#define счесть_ли count_if,
-#define найти_гибель find_end,
-#define цепочка vector,
-#define регистр list,
-#define хронология queue,
-#define взаимная_хронология deque,
-#define ворох stack,
-#define карта map,
-#define чета pair,
-#define дружина set,
+#define сладить sort
+#define почин begin
+#define хана end
+#define размах sizeof
+#define поворотить reverse
+#define попятная_рисовка reverse_copy
+#define руби_пополам binary_search
+#define волочить move
+#define сыскать find
+#define свергнуть advance 
+#define срисовать copy
+#define срисовать_ли copy_if
+#define переворошить transform
+#define сотворять generate
+#define изгнать remove
+#define изгнать_ли remove_if
+#define подменить replace
+#define подменить_ли replace_if
+#define махнуть swap
+#define махнуть_ли swap_if
+#define энный_молодец nth_element
+#define сыскать_ли find_if
+#define сыскать_первого_молодца find_first_of
+#define несравнимый unique
+#define слаженный_ли is_sorted
+#define сплотить merge
+#define могущественный max
+#define ничтожный min
+#define всякий for_each
+#define счесть count
+#define счесть_ли count_if
+#define найти_гибель find_end
+#define цепочка vector
+#define регистр list
+#define хронология queue
+#define взаимная_хронология deque
+#define ворох stack
+#define карта map
+#define чета pair
+#define дружина set
 #define ватага array
 
 внедрить целина = int;
@@ -135,7 +135,7 @@
 внедрить розсуд = bool;
 
 
-перепись счёт_древних_русов{ ноль = 0, целковый = 1, полушка = 2, четвертушка = 3, осьмушка = 4,
-пудовичок = 5, медячок = 6, серебрячок = 7, золотничок = 8, девятичок = 9, десятичок = 10 };
+перепись счёт_древних_русов{ ноль = 0 целковый = 1 полушка = 2 четвертушка = 3 осьмушка = 4
+пудовичок = 5 медячок = 6 серебрячок = 7 золотничок = 8 девятичок = 9 десятичок = 10 };
 
 #endif
