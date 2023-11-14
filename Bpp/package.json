@@ -1,0 +1,53 @@
+{
+  "name": "Bpp",
+  "displayName": "Bpp",
+  "description": "Translator to B++",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.84.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [ // добаляем команды здесь
+      {
+        "command": "Bpp.hello",
+        "category": "B++",
+        "title": "Say Hello"
+      },
+      {
+        "command": "Bpp.world",
+        "category": "B++",
+        "title": "Say World"
+      },
+      {
+        "command": "Bpp.showTime",
+        "category": "B++",
+        "title": "Display Time"
+      },
+      {
+        "command": "Bpp.Translate",
+        "category": "B++",
+        "title": "Translate"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.84.0",
+    "@types/mocha": "^10.0.3",
+    "@types/node": "18.x",
+    "eslint": "^8.52.0",
+    "glob": "^10.3.10",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.6"
+  }
+}
