@@ -9,7 +9,10 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:Bpp.Translate",
+    "onCommand:Bpp.ASCII"
+  ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
@@ -17,6 +20,11 @@
         "command": "Bpp.Translate",
         "category": "B++",
         "title": "Translate"
+      },
+      {
+        "command": "Bpp.ASCII",
+        "category": "B++",
+        "title": "Show ASCII art"
       }
     ]
   },
