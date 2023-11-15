@@ -28,6 +28,15 @@ function activate(context) {
 	/**
 	 * @param {RegExpMatchArray} splittedLine
 	 */
+	function isIncludeLine(splittedLine) { 
+		const index = skipWhitespace(splittedLine, -1);
+		return splittedLine[index] == '#' && splittedLine[index + 1] == 'include';
+	}
+
+
+	/**
+	 * @param {RegExpMatchArray} splittedLine
+	 */
 	function concatSomeWords(splittedLine) {
 		let result = [];
 
@@ -55,9 +64,10 @@ function activate(context) {
 				result.push(splittedLine[index]);
 			}
 		}
-		
+
 		return result;
 	}
+
 
 	/**
 	 * @param {vscode.TextLine} line
@@ -65,13 +75,17 @@ function activate(context) {
 	 */
 	function parseLine(line, editBuilder) {
 		const range = new vscode.Range(line.range.start, line.range.end);
-		if (line.text.startsWith('#include')) {
-			editBuilder.delete(range);
-		} else if (!line.isEmptyOrWhitespace) {
-			const splittedLine = line.text.match(/[\p{L}\p{N}]+|[.,\/#!$%\^&\*;:{}=\-_`~()+*/%]|\s/gu);
-			
+
+		if (!line.isEmptyOrWhitespace) {
+			const splittedLine = line.text.match(/[\p{L}\p{N}]+|[.,\/#!$%\^&\*;:{}\[\]=\-_`~()+*/%]|\s/gu);
+
+			if (isIncludeLine(splittedLine)) {
+				editBuilder.delete(range);
+				return;
+			}
+
 			const lineAfterConcats = concatSomeWords(splittedLine);
-			
+
 			const replaced = lineAfterConcats.map((elem) => {
 				if (dictionary.has(elem)) {
 					return dictionary.get(elem);
