@@ -63,8 +63,8 @@ function activate(context) {
 			} else if (splittedLine[index] === 'size'
 				&& splittedLine[index + 1] === '_'
 				&& splittedLine[index + 2] === 't') {
-					index += 2;
-					result.push('size_t');
+				index += 2;
+				result.push('size_t');
 			} else {
 				result.push(splittedLine[index]);
 			}
@@ -119,10 +119,10 @@ function activate(context) {
 	};
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand("translate", () => {
+		vscode.commands.registerCommand("Bpp.translate", () => {
 
 			vscode.window.showInformationMessage("Славься Русь!");
-			
+
 			const editor = vscode.window.activeTextEditor;
 			if (editor) {
 				editor.edit(editBuilder => {
@@ -132,53 +132,60 @@ function activate(context) {
 		})
 	);
 
-  function insertASCII(document, editBuilder, txtFileNumber) {
-    let txtFilePath;
-    switch (parseInt(txtFileNumber)) {
-      case 1:
-        txtFilePath = path.join(__dirname, 'ascii-arts/ascii-b++.txt');
-        break;
-      case 2:
-        txtFilePath = path.join(__dirname, 'ascii-arts/ascii-lect.txt');
-        break;
-      case 3:
-        txtFilePath = path.join(__dirname, 'ascii-arts/ascii-lizards-must-die-1.txt');
-        break;
-      case 4:
-        txtFilePath = path.join(__dirname, 'ascii-arts/ascii-lizards-must-die-2.txt');
-        break;
-      case 5:
-        txtFilePath = path.join(__dirname, 'ascii-arts/ascii-text-art.txt');
-        break;
-      default:
-        vscode.window.showErrorMessage('Invalid argument. Use 1, 2, 3, 4 or 5.');
-        return;
-    }
-    const content = fs.readFileSync(txtFilePath, 'utf-8');
-    const fullRange = new vscode.Range(0, 0, document.lineCount, 0);
-    editBuilder.delete(fullRange);
-    editBuilder.insert(document.lineAt(0).range.start, content);
-  }
 
-  context.subscriptions.push(
-    vscode.commands.registerCommand("Bpp.ASCII", async () => {
-      const editor = vscode.window.activeTextEditor;
-      if (editor) {
-        const txtFileNumber = await vscode.window.showInputBox({
-          prompt: 'Enter a number (from 1 to 5) to select a ASCII art:',
-          validateInput: value => {
-            const num = parseInt(value);
-            return isNaN(num) || num < 1 || num > 5 ? 'Invalid input. Use 1, 2, 3, 4 or 5.' : null;
-          }
-        });
-        if (txtFileNumber !== undefined) {
-          editor.edit(editBuilder => {
-            insertASCII(editor.document, editBuilder, txtFileNumber);
-          })
-        }
-	    }
-    })
-  )
+	/**
+	   * @param {vscode.TextDocument} document
+	   * @param {vscode.TextEditorEdit} editBuilder
+	   * @param {string} txtFileNumber
+	   */
+	function insertASCII(document, editBuilder, txtFileNumber) {
+		let txtFilePath;
+		switch (parseInt(txtFileNumber)) {
+			case 1:
+				txtFilePath = path.join(__dirname, 'ascii-arts/ascii-b++.txt');
+				break;
+			case 2:
+				txtFilePath = path.join(__dirname, 'ascii-arts/ascii-lect.txt');
+				break;
+			case 3:
+				txtFilePath = path.join(__dirname, 'ascii-arts/ascii-lizards-must-die-1.txt');
+				break;
+			case 4:
+				txtFilePath = path.join(__dirname, 'ascii-arts/ascii-lizards-must-die-2.txt');
+				break;
+			case 5:
+				txtFilePath = path.join(__dirname, 'ascii-arts/ascii-text-art.txt');
+				break;
+			default:
+				vscode.window.showErrorMessage('Invalid argument. Use 1, 2, 3, 4 or 5.');
+				return;
+		}
+		const content = fs.readFileSync(txtFilePath, 'utf-8');
+		const fullRange = new vscode.Range(0, 0, document.lineCount, 0);
+		editBuilder.delete(fullRange);
+		editBuilder.insert(document.lineAt(0).range.start, content);
+	}
+
+
+	context.subscriptions.push(
+		vscode.commands.registerCommand("Bpp.ASCII", async () => {
+			const editor = vscode.window.activeTextEditor;
+			if (editor) {
+				const txtFileNumber = await vscode.window.showInputBox({
+					prompt: 'Укажи счет от целкового до пудовичка',
+					validateInput: value => {
+						const num = parseInt(value);
+						return isNaN(num) || num < 1 || num > 5 ? 'Неверный счет, пиши от целкового до пудовичка' : null;
+					}
+				});
+				if (txtFileNumber !== undefined) {
+					editor.edit(editBuilder => {
+						insertASCII(editor.document, editBuilder, txtFileNumber);
+					})
+				}
+			}
+		})
+	)
 
 }
 
