@@ -1,81 +1,69 @@
 const vscode = require('vscode');
+const fs = require("fs");
+const path = require("path")
 
 /**
  * @param {vscode.ExtensionContext} context
- */
+*/
 function activate(context) {
-	context.subscriptions.push( // оставил, для примера
-		vscode.commands.registerCommand("Bpp.hello", () => {
-			vscode.window.showInformationMessage("Hello,");
-		})
-	);
 
-	context.subscriptions.push(  // оставил, для примера
-		vscode.commands.registerCommand("Bpp.world", () => {
-			vscode.window.showWarningMessage("Warning! Ha Ha");
-		})
-	);
+	const filePath = path.join(__dirname, 'dictionary.json');
+	const json = fs.readFileSync(filePath, 'utf8');
+	const dictionary = new Map(Object.entries(JSON.parse(json)))
 
-	context.subscriptions.push(  // оставил, для примера
-		vscode.commands.registerCommand("Bpp.showTime", () => {
-			var newDate = new Date()
-			vscode.window.showInformationMessage(newDate.toLocaleTimeString());
-		})
-	);
-	
-	function translateFile(editor, dictionary) {
-		editor.edit(editBuilder => {
-			const document = editor.document;
-			for (let lineIndex = 0; lineIndex < document.lineCount; lineIndex++) {
-				const line = document.lineAt(lineIndex);
-				const range = new vscode.Range(line.range.start, line.range.end);
-				if (line.text.startsWith('#include')) {
-					editBuilder.delete(range);
-				} else if (line.text.length >= 2) {
-					var splitted = line.text.match(/\b\w+\b|[.,\/#!$%\^&\*;:{}=\-_`~()]/g);
-					for (let i = 0; i < splitted.length; i++) {
-						if (splitted[i] in dictionary) {
-							splitted[i] = dictionary[splitted[i]];
-						}
-					}
-					editBuilder.replace(range, splitted.join(' '));
+	/**
+	 * @param { vscode.TextDocument } document
+	 */
+	function parseCppCode(document) {
+		const docSize = document.lineCount;
+		for (let i = 0; i < docSize; i++) {
+			const line = document.lineAt(i);
+			const range = new vscode.Range(line.range.start, line.range.end);
+			var splitted = line.text.match(/[\p{L}\p{N}]+|[.,\/#!$%\^&\*;:{}=\-_`~()]/gu);
+			const s = splitted.forEach(elem => {
+				console.log("Current word: " + elem);
+				if (dictionary.has(elem)) {
+					elem = dictionary.get(elem);
 				}
-			}
-			const must_have = '#include "../header/Ве_крест_крест.h"\n\nвнедрить хутор Русь;';
-			editBuilder.insert(document.lineAt(0).range.start, must_have);
-		});
-	}
-
-	const myDict = {
-		'if': 'если',
-		'size_t': 'мерило',
-		'void': 'ничто'
+			});
+			console.log(splitted)
+		}
 	};
 
-	context.subscriptions.push(vscode.commands.registerCommand('Bpp.Translate', () => {
+	context.subscriptions.push(
+		vscode.commands.registerCommand("Bpp.Translate", () => {
 			const editor = vscode.window.activeTextEditor;
 			if (editor) {
-				translateFile(editor, myDict);
+				editor.edit(editBuilder => {
+					const document = editor.document;
+					for (let lineIndex = 0; lineIndex < document.lineCount; lineIndex++) {
+						const line = document.lineAt(lineIndex);
+						const range = new vscode.Range(line.range.start, line.range.end);
+						if (line.text.startsWith('#include')) {
+							editBuilder.delete(range);
+						} else if (line.text.length >= 2) {
+							var splitted = line.text.match(/[\p{L}\p{N}]+|[.,\/#!$%\^&\*;:{}=\-_`~()]/gu);
+							const replaced = splitted.map((elem) => {
+								if (dictionary.has(elem)) {
+									return dictionary.get(elem);
+								}
+								return elem;
+							});
+							editBuilder.replace(range, replaced.join(' '));
+						}
+					}
+					const must_have = '#include "../header/Ве_крест_крест.h"';
+					editBuilder.insert(document.lineAt(0).range.start, must_have);
+				
+					if (document.lineAt(2).text != 'внедрить хутор Русь;' && document.lineAt(2).text != 'внедрить хутор Русь ;') {
+						const must_have = 'внедрить хутор Русь;\n';
+						editBuilder.insert(document.lineAt(2).range.start, must_have);
+					}
+				})
 			}
 		})
 	);
 
-	// context.subscriptions.push(  // основная функция
-	// 	vscode.commands.registerCommand("Bpp.Translate", () => {
-	// 		const editor = vscode.window.activeTextEditor;
-	// 		if (editor) {
-	// 			const document = editor.document;
-	// 			editor.edit(editBuilder => {
-	// 				editor.selections.forEach(sel => {
-	// 					const range = sel.isEmpty ? document.getWordRangeAtPosition(sel.start) || sel : sel;
-	// 					let word = document.getText(range);
-	// 					let transformed = word.split('').map(() => 'a').join(''); // прям как в хаскеле
-	// 					editBuilder.replace(range, transformed);
-	// 				})
-	// 			})
-	// 		}
-	// 	})
-	// );
 }
 
 function deactivate() { }
