@@ -28,7 +28,7 @@ function activate(context) {
 	/**
 	 * @param {RegExpMatchArray} splittedLine
 	 */
-	function isIncludeLine(splittedLine) { 
+	function isIncludeLine(splittedLine) {
 		const index = skipWhitespace(splittedLine, -1);
 		return splittedLine[index] == '#' && splittedLine[index + 1] == 'include';
 	}
@@ -60,6 +60,11 @@ function activate(context) {
 					result.push(' ');
 					result.push(splittedLine[index]);
 				}
+			} else if (splittedLine[index] === 'size'
+				&& splittedLine[index + 1] === '_'
+				&& splittedLine[index + 2] === 't') {
+					index += 2;
+					result.push('size_t');
 			} else {
 				result.push(splittedLine[index]);
 			}
@@ -114,7 +119,10 @@ function activate(context) {
 	};
 
 	context.subscriptions.push(
-		vscode.commands.registerCommand("Bpp.Translate", () => {
+		vscode.commands.registerCommand("translate", () => {
+
+			vscode.window.showInformationMessage("Славься Русь!");
+			
 			const editor = vscode.window.activeTextEditor;
 			if (editor) {
 				editor.edit(editBuilder => {

@@ -14,9 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "Bpp.Translate",
-        "category": "B++",
-        "title": "Translate"
+        "command": "translate",
+        "title": "Слава Руси"
       }
     ]
   },
