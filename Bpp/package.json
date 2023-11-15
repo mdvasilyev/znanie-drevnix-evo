@@ -14,8 +14,14 @@
   "contributes": {
     "commands": [
       {
-        "command": "translate",
+        "command": "Bpp.translate",
+        "category": "B++",
         "title": "Слава Руси"
+      },
+      {
+        "command": "Bpp.ASCII",
+        "category": "B++",
+        "title": "Показать православную икону"
       }
     ]
   },
