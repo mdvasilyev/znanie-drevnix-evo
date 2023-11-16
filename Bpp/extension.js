@@ -157,7 +157,7 @@ function activate(context) {
 				txtFilePath = path.join(__dirname, 'ascii-arts/ascii-text-art.txt');
 				break;
 			default:
-				vscode.window.showErrorMessage('Invalid argument. Use 1, 2, 3, 4 or 5.');
+				vscode.window.showErrorMessage('Неверный счет, пиши от целкового (1) до пудовичка (5)');
 				return;
 		}
 		const content = fs.readFileSync(txtFilePath, 'utf-8');
