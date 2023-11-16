@@ -1,8 +1,8 @@
 {
   "name": "Bkrestkrest",
   "displayName": "Bpp",
-  "description": "Translator to B++",
-  "version": "0.0.3",
+  "description": "Убирает маскировку с С++",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.84.0"
   },

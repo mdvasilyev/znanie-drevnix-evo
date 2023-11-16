@@ -82,7 +82,7 @@ function activate(context) {
 		const range = new vscode.Range(line.range.start, line.range.end);
 
 		if (!line.isEmptyOrWhitespace) {
-			const splittedLine = line.text.match(/[\p{L}\p{N}]+|[.,\/#!$%\^&\*;:{}\[\]=\-_`~()+*/%]|\s/gu);
+			const splittedLine = line.text.match(/[\p{L}\p{N}]+|[.,\/#!$%\^&\*;:{}\[\]=<>"'\-_`~()+*/%]|\s/gu);
 
 			if (isIncludeLine(splittedLine)) {
 				editBuilder.delete(range);
