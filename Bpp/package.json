@@ -9,7 +9,12 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onView:hitLizard-sidebar",
+    "onCommand:Bpp.translate", 
+    "onCommand:Bpp.ASCII",
+    "onCommand:Bpp.hitLizard"
+  ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
@@ -22,8 +27,32 @@
         "command": "Bpp.ASCII",
         "category": "B++",
         "title": "Показать православную икону"
+      },
+      {
+        "command": "Bpp.hitLizard",
+        "category": "B++",
+        "title": "Причинить боль ящеру"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "hitLizard-sidebar-view",
+          "title": "Бей ящера!",
+          "icon": "pics/snake.svg"
+        }
+      ]
+    },
+    "views": {
+      "hitLizard-sidebar-view": [
+        {
+          "type": "webview",
+          "id": "hitLizard-sidebar",
+          "name": "Бей ящера!",
+          "icon": "pics/snake.svg"
+        }
+      ]
+    }
   },
   "scripts": {
     "lint": "eslint .",

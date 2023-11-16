@@ -187,6 +187,23 @@ function activate(context) {
 		})
 	)
 
+    const provider = new CustomSidebarProvider(context.extensionUri);
+
+
+	context.subscriptions.push(
+        vscode.window.registerWebviewViewProvider(
+            "hitLizard-sidebar",
+            provider
+        )
+    );
+
+
+    context.subscriptions.push(
+        vscode.commands.registerCommand("Bpp.hitLizard", () => {
+            const message = "Бей ящера слева!";
+            vscode.window.showInformationMessage(message);
+        })
+    )
 }
 
 function deactivate() { }
@@ -194,4 +211,45 @@ function deactivate() { }
 module.exports = {
 	activate,
 	deactivate
+}
+
+class CustomSidebarProvider {
+  static get viewType() {
+    return 'vscodeSidebar.openview';
+  }
+
+  constructor(extensionUri) {
+    this._extensionUri = extensionUri;
+    this._view = undefined;
+  }
+
+  resolveWebviewView(webviewView, context, token) {
+    this._view = webviewView;
+
+    webviewView.webview.options = {
+      enableScripts: true,
+      localResourceRoots: [this._extensionUri],
+    };
+
+    webviewView.webview.html = this.getHtmlContent(webviewView.webview);
+  }
+
+  getHtmlContent(webview) {
+    const imagePath = vscode.Uri.file(path.join(__dirname, 'pics/capsule_616x353.jpg'));
+    const imageSrc = webview.asWebviewUri(imagePath);
+    return `
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <style>
+                    body { margin: 0; }
+                    img { width: 100%; height: 100%; }
+                </style>
+            </head>
+            <body>
+                <img src="${imageSrc}" alt="My Image">
+            </body>
+        </html>
+    `;
+  }
 }
