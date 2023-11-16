@@ -237,6 +237,12 @@ class CustomSidebarProvider {
   getHtmlContent(webview) {
     const imagePath = vscode.Uri.file(path.join(__dirname, 'pics/capsule_616x353.jpg'));
     const imageSrc = webview.asWebviewUri(imagePath);
+	const imagePath2 = vscode.Uri.file(path.join(__dirname, 'pics/russ-lizard-1.jpeg'));
+    const imageSrc2 = webview.asWebviewUri(imagePath2);
+	const imagePath3 = vscode.Uri.file(path.join(__dirname, 'pics/russ-lizard-2.jpeg'));
+    const imageSrc3 = webview.asWebviewUri(imagePath3);
+	const imagePath4 = vscode.Uri.file(path.join(__dirname, 'pics/bogatiri.png'));
+    const imageSrc4 = webview.asWebviewUri(imagePath4);
     return `
         <!DOCTYPE html>
         <html>
@@ -249,6 +255,9 @@ class CustomSidebarProvider {
             <body>
                 <img src="${imageSrc}" alt="My Image">
                 <p>👊 Бейте 🐍 ящеров, слушайте 📜 лекции профессора Багирова, да пейте воду 🍵 байкальскую, братья 💪 Русы 💪, и тогда узнаете вы, что 🪲 багов в ваших 📜 берестяных грамотах будет появляться гораздо меньше. Да пребудет с вами мощь ⚡ Перуна ⚡</p>
+				<img src="${imageSrc2}" alt="My Image 2">
+            	<img src="${imageSrc3}" alt="My Image 3">
+				<img src="${imageSrc4}" alt="My Image 3">
             </body>
         </html>
     `;
