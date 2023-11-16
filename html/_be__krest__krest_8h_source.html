@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>В††: Исходный файл header/Be_krest_krest.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="B_3.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">В††
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_1ec98ce50fa6ec55b40b8ffb1df38c3c.html">header</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Be_krest_krest.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_be__krest__krest_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef Байкал</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define Байкал</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;Windows.h&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define вперёд_славяне SetConsoleOutputCP(1251)</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a59ed8deba49ce71f727d22440dbe38d2">   20</a></span><span class="preprocessor">#define сладить sort</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ae4a8918602a68a52b7ce7e760e3eb041">   21</a></span><span class="preprocessor">#define почин begin</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a8f475446cebe86861136e34e9b85a73a">   22</a></span><span class="preprocessor">#define хана end</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a9320c1bda7e9a46091b24b2032e75f9d">   23</a></span><span class="preprocessor">#define размах sizeof</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ac9dee8da09cd5b26c0901be61bf97a38">   24</a></span><span class="preprocessor">#define поворотить reverse</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ac0379c71d68e297b06abcb3a6cea7eaf">   25</a></span><span class="preprocessor">#define попятная_рисовка reverse_copy</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a8794be5af25cbdebf39b4ea02ddbfd84">   26</a></span><span class="preprocessor">#define руби_пополам binary_search</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a39fda408790451df76620a2aec8a93dd">   27</a></span><span class="preprocessor">#define волочить move</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a0e18dca6375ab31a75ba22b941a9420d">   28</a></span><span class="preprocessor">#define сыскать find</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a37b3d3d43f0911c5c69f5e5d658f991d">   29</a></span><span class="preprocessor">#define свергнуть advance </span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a66442400937bae9569f369cac240e9dd">   30</a></span><span class="preprocessor">#define срисовать copy</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a4b207709d5117383bdfc4394a5a45fe7">   31</a></span><span class="preprocessor">#define срисовать_ли copy_if</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a9e275e5cd3b4dd9997acc523551f30f1">   32</a></span><span class="preprocessor">#define переворошить transform</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#abfaacc255da91c336581355b89e88ccb">   33</a></span><span class="preprocessor">#define сотворять generate</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ae25eb8c6917601460a4f221fdb837494">   34</a></span><span class="preprocessor">#define изгнать remove</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a782a73f5d65f57c3be282da099a677eb">   35</a></span><span class="preprocessor">#define изгнать_ли remove_if</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#af7c38fb61ef52c16cc657b929665059f">   36</a></span><span class="preprocessor">#define подменить replace</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a745baf599838a17c37521efd36dd20df">   37</a></span><span class="preprocessor">#define подменить_ли replace_if</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#acdc8860b1d3a02be731aeb4bd9ddcd81">   38</a></span><span class="preprocessor">#define махнуть swap</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a715c93e54dc2c358ad0bf05e46286e51">   39</a></span><span class="preprocessor">#define махнуть_ли swap_if</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a8369f9839accb2e518a775c45595ce48">   40</a></span><span class="preprocessor">#define энный_молодец nth_element</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a39cfdaf609fc45ce5e3a1843b1dfa484">   41</a></span><span class="preprocessor">#define сыскать_ли find_if</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ae3897f70875b94fe47999feab8e56d55">   42</a></span><span class="preprocessor">#define сыскать_первого_молодца find_first_of</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ab46cdf206b3380b3c77571f790e08cce">   43</a></span><span class="preprocessor">#define несравнимый unique</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a5874c8290ecdc297a18c1bcb3a704ef6">   44</a></span><span class="preprocessor">#define слаженный_ли is_sorted</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a5b8886a994f410124bd3b6569ec4f796">   45</a></span><span class="preprocessor">#define сплотить merge</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a96b1370199c9f13bfe92e68d3566b253">   46</a></span><span class="preprocessor">#define могущественный max</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a6e2c25e9e8d6141ae6c9ab8644a54551">   47</a></span><span class="preprocessor">#define ничтожный min</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a54a7b29bb6a415a257dde9060ee766b5">   48</a></span><span class="preprocessor">#define всякий for_each</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ae20430ff7ccec6addc68e426dcf252dd">   49</a></span><span class="preprocessor">#define счесть count</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a9b2abe67abbcb261f0cea868bd825c36">   50</a></span><span class="preprocessor">#define счесть_ли count_if</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a259fbf8d09fcbfb9a23ce40cae017723">   51</a></span><span class="preprocessor">#define найти_гибель find_end</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ab197da4045aac218759c7349dbf3ce93">   52</a></span><span class="preprocessor">#define цепочка vector</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#aa6ae0a233ff0b5efed5502688b914520">   53</a></span><span class="preprocessor">#define регистр list</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a2447e2f0078feb7e627c1fed7f38b484">   54</a></span><span class="preprocessor">#define хронология queue</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a37bf7c212650a89119c1db79141bed27">   55</a></span><span class="preprocessor">#define взаимная_хронология deque</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a96abdc9e7eb55ffd22381cbe6b552774">   56</a></span><span class="preprocessor">#define ворох stack</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a9dcc834c2e652b32f4e195ea6820fa7f">   57</a></span><span class="preprocessor">#define карта map</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a2237596e71736d1aae0e0584575d77e4">   58</a></span><span class="preprocessor">#define чета pair</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a89ddf461d65bfe3ab40879ad2198cbaf">   59</a></span><span class="preprocessor">#define дружина set</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a73693708ec687a3129e882ddd734cae5">   60</a></span><span class="preprocessor">#define ватага array</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a2f849fb7b0d210fa42027d98495de730">   61</a></span><span class="preprocessor">#define первый first</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#acdcdf3c5be71fa14122cdc644473bc67">   62</a></span><span class="preprocessor">#define второй second</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#afce52c8ac5d95b47921766d4c6af83cd">   63</a></span><span class="preprocessor">#define размер size</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a577a811dad3c75c0c79489a3db910f1d">   64</a></span><span class="preprocessor">#define приписать_сзади push_back</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#af767340336d541f43912cae2bbde68eb">   70</a></span><span class="preprocessor">#define царь_батюшка_главный int main</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">   71</a></span><span class="preprocessor">#define внедрить using</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ad49b174cb159db28f9d49e20780c3a81">   72</a></span><span class="preprocessor">#define Русь std</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a24ca3f462255073e17b3246c08893343">   73</a></span><span class="preprocessor">#define молвить cout</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#acf70a90667dc9a19f3f11add4fb9785e">   74</a></span><span class="preprocessor">#define внемлить cin</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#acc55363a897c2f112aec51342776d391">   75</a></span><span class="preprocessor">#define воздать return</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a6ae6587dc1142ae9e30dc0e02ad94021">   77</a></span><span class="preprocessor">#define пахать do</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a675f3871e7102465a328723671ba1a5d">   78</a></span><span class="preprocessor">#define покуда while</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ad189d5deb3d457bc413406ee0c4da732">   79</a></span><span class="preprocessor">#define для for</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ade6bad707a19f9b7f0c4b6f55f903d2f">   81</a></span><span class="preprocessor">#define коли if</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a5f425ac59931d04b73618f34f4815e1b">   82</a></span><span class="preprocessor">#define отнюдь else</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a050296df844f02a522bb0a453dcecd4a">   84</a></span><span class="preprocessor">#define династия class</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a73b6f8291b3c26d1133ec41d37a19d9a">   85</a></span><span class="preprocessor">#define семейство struct</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#af0fcf5353fc9dc05ca5f6e9df19419ab">   86</a></span><span class="preprocessor">#define перепись enum</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a7e7bc282e577a863a7b1d1fb95ed025c">   88</a></span><span class="preprocessor">#define бить_ящеров break</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a1c30939f331a91df5b19787fb525dc5c">   89</a></span><span class="preprocessor">#define добить_ящеров continue</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a450fb7d9df41db301538710855e408d4">   90</a></span><span class="preprocessor">#define путевой_камень switch</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#aa2415130612292570eb2128fc242ed1b">   91</a></span><span class="preprocessor">#define путь case</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a2a63b748bbcd94ba93201013b1912df7">   92</a></span><span class="preprocessor">#define базированно default</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a6e1ab23dea3ca45b9ac0532716d43f31">   94</a></span><span class="preprocessor">#define правда true</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ade5e6e7fa91510a342c2e9e9a7cb00f2">   95</a></span><span class="preprocessor">#define кривда false</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#acef7c4e97308a2b7b50d6eb0ae2f13c6">   97</a></span><span class="preprocessor">#define прыг_скок endl</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a7e0fd3970483994b7d5dbb0f4453161b">   98</a></span><span class="preprocessor">#define новь new</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a4bb2a8f74cb8195c2a56054202b6524d">   99</a></span><span class="preprocessor">#define казнь delete</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ae0736509d9bb8ef1498fac4c7506b1ba">  100</a></span><span class="preprocessor">#define туда_не_знаю_куда nullptr</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a7456b2d6ac8c8d496b4ba6f5076b9acc">  101</a></span><span class="preprocessor">#define НИЧТО NULL</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ad130a22d834b9c47d4869156db947cae">  102</a></span><span class="preprocessor">#define судьба random</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a5705d63c3dc0eec0c499eb871be4c7dd">  103</a></span><span class="preprocessor">#define приказ_княжий const</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a635d6f26675e0e5679a0de336778610b">  104</a></span><span class="preprocessor">#define мощь pow</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#af451ea8703ad14b8bc266d928316fefa">  105</a></span><span class="preprocessor">#define получи_басурман throw</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a23e1d290f5d3d89761d4b1a66f9d92f7">  106</a></span><span class="preprocessor">#define гнев_Перуна exception</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a2736d1adec6b0e6572a9aa04934004ec">  107</a></span><span class="preprocessor">#define читать_летопись ifstream</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a27603ed4b091a519fe4acf35a02162c7">  108</a></span><span class="preprocessor">#define писать_летопись ofstream</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a3ec4dac01636048107b4046a00189079">  109</a></span><span class="preprocessor">#define летопись fstream</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a26cdbc5c11f4b3e7c0efbcb596a4d98b">  110</a></span><span class="preprocessor">#define друже friend</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a4870965f4330c0d750f29ed090bfe1f5">  111</a></span><span class="preprocessor">#define окстись goto</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a44aab7765ddf23146d21788a19819873">  112</a></span><span class="preprocessor">#define свет_мой_зеркальце template</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a8293733d24c1da8592d7759c72980292">  113</a></span><span class="preprocessor">#define скажи typename</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a91ee4c18af4b1beb9efeb7b77d31f2df">  114</a></span><span class="preprocessor">#define царский private</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#afb4a147371cb888c8a3bb6ccd7f720a1">  115</a></span><span class="preprocessor">#define народный public</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a97518bf59ecd16ead4d61c9e744e7e8c">  116</a></span><span class="preprocessor">#define дружинный protected</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a7737705fb9db6bb8ee789b7e83e558da">  117</a></span><span class="preprocessor">#define встрой inline</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a78e08e29eb47ca97c8fd747af0e89bee">  118</a></span><span class="preprocessor">#define кощей static</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a19b5bde1bd25fd5496fb36deefff56f1">  119</a></span><span class="preprocessor">#define однобокий unsigned</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a86d22ee3e3537c0bddb9566c0031bd98">  120</a></span><span class="preprocessor">#define пытать_ящера try</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a0a810ed899c058eaa06eba5a2445eba4">  121</a></span><span class="preprocessor">#define поймать_ящера catch</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a96820d86faf7f4ef119636d268c6f222">  122</a></span><span class="preprocessor">#define хутор namespace</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ab8d545574f12722e645c10fab2b67bfa">  123</a></span><span class="preprocessor">#define откупорить open</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a3010b90679a6d9411af7352a26bebb24">  124</a></span><span class="preprocessor">#define закупорить close</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a19336bf93b56a48854913a2ac0e41b2a">  125</a></span><span class="preprocessor">#define суд_Перуна auto</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a28fce16b9f2c9bb144367d9e7ab46af8">  126</a></span><span class="preprocessor">#define аки static_cast</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#aeeaff94303ca4382e30f164b66428faa">  127</a></span><span class="preprocessor">#define очами_стрельнуть peek</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a4e2ba7c27285dcc760f64c0e1f8a6c63">  129</a></span><span class="preprocessor">#define зачерпнуть getline</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#af56754ad13372882ae2ccffae9c73eaf">  130</a></span><span class="preprocessor">#define добрый_молодец good</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a143f07b5ea548f6fe3c6a423e118b725">  131</a></span><span class="preprocessor">#define змей_подколодный fail</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a2d9995645a411d3a61ba75a502fa3bf1">  132</a></span><span class="preprocessor">#define вот_и_сказочке_конец eof</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#aae44fac75ad2e775fcc97f978e7d301d">  133</a></span><span class="preprocessor">#define вск eof</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a4fa162885539f03ce138d7ca7df19757">  134</a></span><span class="preprocessor">#define приток_Байкала ostream</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#af95753ab50b3a870ed7e79b2a4bda2f7">  135</a></span><span class="preprocessor">#define отток_Байкала istream</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a6ae6d9224758ef556df972b58dfd21bd">  136</a></span><span class="preprocessor">#define меняло std::swap</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#abb1e8a694dbe69d50d2822695440abd7">  137</a></span><span class="preprocessor">#define отщипнуть get</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ae072712c87b5379f2212d447043a2224">  139</a></span><a class="code hl_define" href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">внедрить</a> <a class="code hl_variable" href="_be__krest__krest_8h.html#ae072712c87b5379f2212d447043a2224">целина</a> = int;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#ad42e5840459b38a8b3b6fbd64b0a2307">  140</a></span><a class="code hl_define" href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">внедрить</a> <a class="code hl_variable" href="_be__krest__krest_8h.html#ad42e5840459b38a8b3b6fbd64b0a2307">вель_дробь</a> = double;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a350debe9ae7e0d0877ea17752671e05b">  141</a></span><a class="code hl_define" href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">внедрить</a> <a class="code hl_variable" href="_be__krest__krest_8h.html#a350debe9ae7e0d0877ea17752671e05b">малый_дробь</a> = float;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a630684ccb37329b5a263c3474871c441">  142</a></span><a class="code hl_define" href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">внедрить</a> <a class="code hl_variable" href="_be__krest__krest_8h.html#a630684ccb37329b5a263c3474871c441">буква</a> = char;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#adc844cac58a054924f6d00c487366950">  143</a></span><a class="code hl_define" href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">внедрить</a> <a class="code hl_variable" href="_be__krest__krest_8h.html#adc844cac58a054924f6d00c487366950">много_букав</a> = Русь::string;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a4bbe312df5088b5033c96c1cca332833">  144</a></span><a class="code hl_define" href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">внедрить</a> <a class="code hl_variable" href="_be__krest__krest_8h.html#a4bbe312df5088b5033c96c1cca332833">бестолочь</a> = void;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a5e1e499dacc8778e2f244b3659b71c5b">  145</a></span><a class="code hl_define" href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">внедрить</a> <a class="code hl_variable" href="_be__krest__krest_8h.html#a5e1e499dacc8778e2f244b3659b71c5b">карлик</a> = short;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#af2f77bc17f79717e842bffea351eb14a">  146</a></span><a class="code hl_define" href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">внедрить</a> <a class="code hl_variable" href="_be__krest__krest_8h.html#af2f77bc17f79717e842bffea351eb14a">долговязый</a> = long;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a1725c8de9cdaf3418842d3e0e80cc7af">  147</a></span><a class="code hl_define" href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">внедрить</a> <a class="code hl_variable" href="_be__krest__krest_8h.html#a1725c8de9cdaf3418842d3e0e80cc7af">Петр_Первый</a> = <span class="keywordtype">long</span> long;</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a91daf410472b954e16e8aa9a5f4a41e6">  148</a></span><a class="code hl_define" href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">внедрить</a> <a class="code hl_variable" href="_be__krest__krest_8h.html#a91daf410472b954e16e8aa9a5f4a41e6">мерило</a> = size_t;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a21ba60646a3de62646c07588c5a1e777">  149</a></span><a class="code hl_define" href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">внедрить</a> <a class="code hl_variable" href="_be__krest__krest_8h.html#a21ba60646a3de62646c07588c5a1e777">розсуд</a> = bool;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="foldopen" id="foldopen00152" data-start="{" data-end="};">
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="_be__krest__krest_8h.html#a27fb562d01dfa5dada5532eef71420c3">  152</a></span><a class="code hl_define" href="_be__krest__krest_8h.html#af0fcf5353fc9dc05ca5f6e9df19419ab">перепись</a> <a class="code hl_variable" href="_be__krest__krest_8h.html#a27fb562d01dfa5dada5532eef71420c3">счёт_древних_русов</a>{ ноль = 0, целковый = 1, полушка = 2, четвертушка = 3, осьмушка = 4,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>пудовичок = 5, медячок = 6, серебрячок = 7, золотничок = 8, девятичок = 9, десятичок = 10 };</div>
+</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_a0f80fbb392f6d0b92ebdef14a068a7b1"><div class="ttname"><a href="_be__krest__krest_8h.html#a0f80fbb392f6d0b92ebdef14a068a7b1">внедрить</a></div><div class="ttdeci">#define внедрить</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:71</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_a1725c8de9cdaf3418842d3e0e80cc7af"><div class="ttname"><a href="_be__krest__krest_8h.html#a1725c8de9cdaf3418842d3e0e80cc7af">Петр_Первый</a></div><div class="ttdeci">внедрить Петр_Первый</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:147</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_a21ba60646a3de62646c07588c5a1e777"><div class="ttname"><a href="_be__krest__krest_8h.html#a21ba60646a3de62646c07588c5a1e777">розсуд</a></div><div class="ttdeci">внедрить розсуд</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:149</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_a27fb562d01dfa5dada5532eef71420c3"><div class="ttname"><a href="_be__krest__krest_8h.html#a27fb562d01dfa5dada5532eef71420c3">счёт_древних_русов</a></div><div class="ttdeci">перепись счёт_древних_русов</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:152</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_a350debe9ae7e0d0877ea17752671e05b"><div class="ttname"><a href="_be__krest__krest_8h.html#a350debe9ae7e0d0877ea17752671e05b">малый_дробь</a></div><div class="ttdeci">внедрить малый_дробь</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:141</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_a4bbe312df5088b5033c96c1cca332833"><div class="ttname"><a href="_be__krest__krest_8h.html#a4bbe312df5088b5033c96c1cca332833">бестолочь</a></div><div class="ttdeci">внедрить бестолочь</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:144</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_a5e1e499dacc8778e2f244b3659b71c5b"><div class="ttname"><a href="_be__krest__krest_8h.html#a5e1e499dacc8778e2f244b3659b71c5b">карлик</a></div><div class="ttdeci">внедрить карлик</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:145</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_a630684ccb37329b5a263c3474871c441"><div class="ttname"><a href="_be__krest__krest_8h.html#a630684ccb37329b5a263c3474871c441">буква</a></div><div class="ttdeci">внедрить буква</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:142</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_a91daf410472b954e16e8aa9a5f4a41e6"><div class="ttname"><a href="_be__krest__krest_8h.html#a91daf410472b954e16e8aa9a5f4a41e6">мерило</a></div><div class="ttdeci">внедрить мерило</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:148</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_ad42e5840459b38a8b3b6fbd64b0a2307"><div class="ttname"><a href="_be__krest__krest_8h.html#ad42e5840459b38a8b3b6fbd64b0a2307">вель_дробь</a></div><div class="ttdeci">внедрить вель_дробь</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:140</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_adc844cac58a054924f6d00c487366950"><div class="ttname"><a href="_be__krest__krest_8h.html#adc844cac58a054924f6d00c487366950">много_букав</a></div><div class="ttdeci">внедрить много_букав</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:143</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_ae072712c87b5379f2212d447043a2224"><div class="ttname"><a href="_be__krest__krest_8h.html#ae072712c87b5379f2212d447043a2224">целина</a></div><div class="ttdeci">внедрить целина</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:139</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_af0fcf5353fc9dc05ca5f6e9df19419ab"><div class="ttname"><a href="_be__krest__krest_8h.html#af0fcf5353fc9dc05ca5f6e9df19419ab">перепись</a></div><div class="ttdeci">#define перепись</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:86</div></div>
+<div class="ttc" id="a_be__krest__krest_8h_html_af2f77bc17f79717e842bffea351eb14a"><div class="ttname"><a href="_be__krest__krest_8h.html#af2f77bc17f79717e842bffea351eb14a">долговязый</a></div><div class="ttdeci">внедрить долговязый</div><div class="ttdef"><b>Definition</b> Be_krest_krest.h:146</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

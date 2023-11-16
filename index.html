@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кругификатор кода</title>
+</head>
+<body>
+    <textarea id="inputCode" rows="10" cols="50" placeholder="Введите ваш код здесь..."></textarea>
+    <br>
+    <button onclick="transformToCircle()">Преобразовать в круг</button>
+    <br>
+    <div id="outputCode" style="width: 300px; height: 300px; border: 1px solid black; border-radius: 50%; overflow: hidden; padding: 10px;"></div>
+
+    <script>
+        function transformToCircle() {
+            var inputCode = document.getElementById("inputCode").value;
+            var outputCode = document.getElementById("outputCode");
+
+            // Опционально: удалите все пробелы из кода для более компактного круга
+            inputCode = inputCode.replace(/\s/g, '');
+
+            // Задаем радиус круга
+            var radius = 100;
+
+            // Рассчитываем угловой шаг для каждой буквы
+            var angleStep = (2 * Math.PI) / inputCode.length;
+
+            var circleCode = '';
+            for (var i = 0; i < inputCode.length; i++) {
+                var angle = i * angleStep;
+                var x = Math.round(radius * Math.cos(angle));
+                var y = Math.round(radius * Math.sin(angle));
+
+                circleCode += '<span style="position: absolute; transform: translate(' + x + 'px,' + y + 'px);">' + inputCode[i] + '</span>';
+            }
+
+            outputCode.innerHTML = circleCode;
+        }
+    </script>
+</body>
+</html>

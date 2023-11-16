@@ -1,0 +1,108 @@
+\doxysection{Ве\+\_\+крест\+\_\+крест.\+h}
+\hypertarget{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_source}{}\label{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_source}\index{header/Ве\_крест\_крест.h@{header/Ве\_крест\_крест.h}}
+\mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ Байкал}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ Байкал}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifdef\ \_WIN32}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <Windows.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ вперёд\_славяне\ SetConsoleOutputCP(1251)}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ вперёд\_славяне}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#define\ царь\_батюшка\_главный\ int\ main}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ внедрить\ using}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ обозвать\ typedef}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ Русь\ std}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ молвить\ cout}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ внемлить\ cin}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#define\ воздать\ return}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ пахать\ do}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ покуда\ while}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ для\ for}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ коли\ if}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ отнюдь\ else}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ династия\ class}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ семейство\ struct}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ перепись\ enum}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ бить\_ящеров\ break}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ добить\_ящеров\ continue}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ путевой\_камень\ switch}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ путь\ case}}
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ базированно\ default}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ правда\ true}}
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#define\ кривда\ false}}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ прыг\_скок\ endl}}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ новь\ new}}
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ казнь\ delete}}
+\DoxyCodeLine{00047\ \textcolor{preprocessor}{\#define\ туда\_не\_знаю\_куда\ nullptr}}
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#define\ НИЧТО\ NULL}}
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ судьба\ random}}
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ приказ\_княжий\ const}}
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ мощь\ pow}}
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#define\ получи\_басурман\ throw}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#define\ гнев\_Перуна\ exception}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ читать\_летопись\ ifstream}}
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ писать\_летопись\ ofstream}}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ летопись\ fstream}}
+\DoxyCodeLine{00057\ \textcolor{preprocessor}{\#define\ друже\ friend}}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#define\ окстись\ goto}}
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#define\ свет\_мой\_зеркальце\ template}}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ скажи\ typename}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ царский\ private}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ народный\ public}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ дружинный\ protected}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ встрой\ inline}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ кощей\ static}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ однобокий\ unsigned}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ пытать\_ящера\ try}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ поймать\_ящера\ catch}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ хутор\ namespace}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ откупорить\ open}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ закупорить\ close}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ суд\_Перуна\ auto}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ аки\ static\_cast}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ очами\_стрельнуть\ peek}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ зачерпнуть\ getline}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ добрый\_молодец\ good}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ змей\_подколодный\ fail}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ вот\_и\_сказочке\_конец\ eof}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ вск\ eof}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ приток\_Байкала\ ostream}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ отток\_Байкала\ istream}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ меняло\ std::swap}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ отщипнуть\ get}}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_ae072712c87b5379f2212d447043a2224}{целина}}\ =\ int;}
+\DoxyCodeLine{00087\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_ad42e5840459b38a8b3b6fbd64b0a2307}{вель\_дробь}}\ =\ double;}
+\DoxyCodeLine{00088\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a350debe9ae7e0d0877ea17752671e05b}{малый\_дробь}}\ =\ float;}
+\DoxyCodeLine{00089\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a630684ccb37329b5a263c3474871c441}{буква}}\ =\ char;}
+\DoxyCodeLine{00090\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_adc844cac58a054924f6d00c487366950}{много\_букав}}\ =\ Русь::string;}
+\DoxyCodeLine{00091\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a4bbe312df5088b5033c96c1cca332833}{бестолочь}}\ =\ void;}
+\DoxyCodeLine{00092\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a5e1e499dacc8778e2f244b3659b71c5b}{карлик}}\ =\ short;}
+\DoxyCodeLine{00093\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_af2f77bc17f79717e842bffea351eb14a}{долговязый}}\ =\ long;}
+\DoxyCodeLine{00094\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a1725c8de9cdaf3418842d3e0e80cc7af}{Петр\_Первый}}\ =\ \textcolor{keywordtype}{long}\ long;}
+\DoxyCodeLine{00095\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a91daf410472b954e16e8aa9a5f4a41e6}{мерило}}\ =\ size\_t;}
+\DoxyCodeLine{00096\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a21ba60646a3de62646c07588c5a1e777}{розсуд}}\ =\ bool;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_af0fcf5353fc9dc05ca5f6e9df19419ab}{перепись}}\ \mbox{\hyperlink{_xD0_x92_xD0_xB5___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82___xD0_xBA_xD1_x80_xD0_xB5_xD1_x81_xD1_x82_8h_a27fb562d01dfa5dada5532eef71420c3}{счёт\_древних\_русов}}\{\ ноль\ =\ 0,\ целковый\ =\ 1,\ полушка\ =\ 2,\ четвертушка\ =\ 3,\ осьмушка\ =\ 4,}
+\DoxyCodeLine{00100\ пудовичок\ =\ 5,\ медячок\ =\ 6,\ серебрячок\ =\ 7,\ золотничок\ =\ 8,\ девятичок\ =\ 9,\ десятичок\ =\ 10\ \};}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

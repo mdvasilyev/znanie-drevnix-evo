@@ -1,0 +1,969 @@
+\doxysection{Файл header/\+Be\+\_\+krest\+\_\+krest.h}
+\hypertarget{_be__krest__krest_8h}{}\label{_be__krest__krest_8h}\index{header/Be\_krest\_krest.h@{header/Be\_krest\_krest.h}}
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+\doxysubsubsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a59ed8deba49ce71f727d22440dbe38d2}{сладить}}~sort
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ae4a8918602a68a52b7ce7e760e3eb041}{почин}}~begin
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a8f475446cebe86861136e34e9b85a73a}{хана}}~end
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a9320c1bda7e9a46091b24b2032e75f9d}{размах}}~sizeof
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ac9dee8da09cd5b26c0901be61bf97a38}{поворотить}}~reverse
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ac0379c71d68e297b06abcb3a6cea7eaf}{попятная\+\_\+рисовка}}~reverse\+\_\+copy
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a8794be5af25cbdebf39b4ea02ddbfd84}{руби\+\_\+пополам}}~binary\+\_\+search
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a39fda408790451df76620a2aec8a93dd}{волочить}}~move
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a0e18dca6375ab31a75ba22b941a9420d}{сыскать}}~find
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a37b3d3d43f0911c5c69f5e5d658f991d}{свергнуть}}~advance
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a66442400937bae9569f369cac240e9dd}{срисовать}}~copy
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a4b207709d5117383bdfc4394a5a45fe7}{срисовать\+\_\+ли}}~copy\+\_\+if
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a9e275e5cd3b4dd9997acc523551f30f1}{переворошить}}~transform
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_abfaacc255da91c336581355b89e88ccb}{сотворять}}~generate
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ae25eb8c6917601460a4f221fdb837494}{изгнать}}~remove
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a782a73f5d65f57c3be282da099a677eb}{изгнать\+\_\+ли}}~remove\+\_\+if
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_af7c38fb61ef52c16cc657b929665059f}{подменить}}~replace
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a745baf599838a17c37521efd36dd20df}{подменить\+\_\+ли}}~replace\+\_\+if
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_acdc8860b1d3a02be731aeb4bd9ddcd81}{махнуть}}~swap
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a715c93e54dc2c358ad0bf05e46286e51}{махнуть\+\_\+ли}}~swap\+\_\+if
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a8369f9839accb2e518a775c45595ce48}{энный\+\_\+молодец}}~nth\+\_\+element
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a39cfdaf609fc45ce5e3a1843b1dfa484}{сыскать\+\_\+ли}}~find\+\_\+if
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ae3897f70875b94fe47999feab8e56d55}{сыскать\+\_\+первого\+\_\+молодца}}~find\+\_\+first\+\_\+of
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ab46cdf206b3380b3c77571f790e08cce}{несравнимый}}~unique
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a5874c8290ecdc297a18c1bcb3a704ef6}{слаженный\+\_\+ли}}~is\+\_\+sorted
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a5b8886a994f410124bd3b6569ec4f796}{сплотить}}~merge
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a96b1370199c9f13bfe92e68d3566b253}{могущественный}}~max
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a6e2c25e9e8d6141ae6c9ab8644a54551}{ничтожный}}~min
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a54a7b29bb6a415a257dde9060ee766b5}{всякий}}~for\+\_\+each
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ae20430ff7ccec6addc68e426dcf252dd}{счесть}}~count
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a9b2abe67abbcb261f0cea868bd825c36}{счесть\+\_\+ли}}~count\+\_\+if
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a259fbf8d09fcbfb9a23ce40cae017723}{найти\+\_\+гибель}}~find\+\_\+end
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ab197da4045aac218759c7349dbf3ce93}{цепочка}}~vector
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_aa6ae0a233ff0b5efed5502688b914520}{регистр}}~list
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a2447e2f0078feb7e627c1fed7f38b484}{хронология}}~queue
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a37bf7c212650a89119c1db79141bed27}{взаимная\+\_\+хронология}}~deque
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a96abdc9e7eb55ffd22381cbe6b552774}{ворох}}~stack
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a9dcc834c2e652b32f4e195ea6820fa7f}{карта}}~map
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a2237596e71736d1aae0e0584575d77e4}{чета}}~pair
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a89ddf461d65bfe3ab40879ad2198cbaf}{дружина}}~set
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a73693708ec687a3129e882ddd734cae5}{ватага}}~array
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a2f849fb7b0d210fa42027d98495de730}{первый}}~first
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_acdcdf3c5be71fa14122cdc644473bc67}{второй}}~second
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_afce52c8ac5d95b47921766d4c6af83cd}{размер}}~size
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a577a811dad3c75c0c79489a3db910f1d}{приписать\+\_\+сзади}}~push\+\_\+back
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_af767340336d541f43912cae2bbde68eb}{царь\+\_\+батюшка\+\_\+главный}}~int main
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}~using
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ad49b174cb159db28f9d49e20780c3a81}{Русь}}~std
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a24ca3f462255073e17b3246c08893343}{молвить}}~cout
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_acf70a90667dc9a19f3f11add4fb9785e}{внемлить}}~cin
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_acc55363a897c2f112aec51342776d391}{воздать}}~return
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a6ae6587dc1142ae9e30dc0e02ad94021}{пахать}}~do
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a675f3871e7102465a328723671ba1a5d}{покуда}}~while
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ad189d5deb3d457bc413406ee0c4da732}{для}}~for
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ade6bad707a19f9b7f0c4b6f55f903d2f}{коли}}~if
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a5f425ac59931d04b73618f34f4815e1b}{отнюдь}}~else
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a050296df844f02a522bb0a453dcecd4a}{династия}}~class
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a73b6f8291b3c26d1133ec41d37a19d9a}{семейство}}~struct
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_af0fcf5353fc9dc05ca5f6e9df19419ab}{перепись}}~enum
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a7e7bc282e577a863a7b1d1fb95ed025c}{бить\+\_\+ящеров}}~break
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a1c30939f331a91df5b19787fb525dc5c}{добить\+\_\+ящеров}}~continue
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a450fb7d9df41db301538710855e408d4}{путевой\+\_\+камень}}~switch
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_aa2415130612292570eb2128fc242ed1b}{путь}}~case
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a2a63b748bbcd94ba93201013b1912df7}{базированно}}~default
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a6e1ab23dea3ca45b9ac0532716d43f31}{правда}}~true
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ade5e6e7fa91510a342c2e9e9a7cb00f2}{кривда}}~false
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_acef7c4e97308a2b7b50d6eb0ae2f13c6}{прыг\+\_\+скок}}~endl
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a7e0fd3970483994b7d5dbb0f4453161b}{новь}}~new
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a4bb2a8f74cb8195c2a56054202b6524d}{казнь}}~delete
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ae0736509d9bb8ef1498fac4c7506b1ba}{туда\+\_\+не\+\_\+знаю\+\_\+куда}}~nullptr
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a7456b2d6ac8c8d496b4ba6f5076b9acc}{НИЧТО}}~NULL
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ad130a22d834b9c47d4869156db947cae}{судьба}}~random
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a5705d63c3dc0eec0c499eb871be4c7dd}{приказ\+\_\+княжий}}~const
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a635d6f26675e0e5679a0de336778610b}{мощь}}~pow
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_af451ea8703ad14b8bc266d928316fefa}{получи\+\_\+басурман}}~throw
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a23e1d290f5d3d89761d4b1a66f9d92f7}{гнев\+\_\+Перуна}}~exception
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a2736d1adec6b0e6572a9aa04934004ec}{читать\+\_\+летопись}}~ifstream
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a27603ed4b091a519fe4acf35a02162c7}{писать\+\_\+летопись}}~ofstream
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a3ec4dac01636048107b4046a00189079}{летопись}}~fstream
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a26cdbc5c11f4b3e7c0efbcb596a4d98b}{друже}}~friend
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a4870965f4330c0d750f29ed090bfe1f5}{окстись}}~goto
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a44aab7765ddf23146d21788a19819873}{свет\+\_\+мой\+\_\+зеркальце}}~template
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a8293733d24c1da8592d7759c72980292}{скажи}}~typename
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a91ee4c18af4b1beb9efeb7b77d31f2df}{царский}}~private
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_afb4a147371cb888c8a3bb6ccd7f720a1}{народный}}~public
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a97518bf59ecd16ead4d61c9e744e7e8c}{дружинный}}~protected
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a7737705fb9db6bb8ee789b7e83e558da}{встрой}}~inline
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a78e08e29eb47ca97c8fd747af0e89bee}{кощей}}~static
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a19b5bde1bd25fd5496fb36deefff56f1}{однобокий}}~unsigned
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a86d22ee3e3537c0bddb9566c0031bd98}{пытать\+\_\+ящера}}~try
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a0a810ed899c058eaa06eba5a2445eba4}{поймать\+\_\+ящера}}~catch
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a96820d86faf7f4ef119636d268c6f222}{хутор}}~namespace
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_ab8d545574f12722e645c10fab2b67bfa}{откупорить}}~open
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a3010b90679a6d9411af7352a26bebb24}{закупорить}}~close
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a19336bf93b56a48854913a2ac0e41b2a}{суд\+\_\+Перуна}}~auto
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a28fce16b9f2c9bb144367d9e7ab46af8}{аки}}~static\+\_\+cast
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_aeeaff94303ca4382e30f164b66428faa}{очами\+\_\+стрельнуть}}~peek
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a4e2ba7c27285dcc760f64c0e1f8a6c63}{зачерпнуть}}~getline
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_af56754ad13372882ae2ccffae9c73eaf}{добрый\+\_\+молодец}}~good
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a143f07b5ea548f6fe3c6a423e118b725}{змей\+\_\+подколодный}}~fail
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a2d9995645a411d3a61ba75a502fa3bf1}{вот\+\_\+и\+\_\+сказочке\+\_\+конец}}~eof
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_aae44fac75ad2e775fcc97f978e7d301d}{вск}}~eof
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a4fa162885539f03ce138d7ca7df19757}{приток\+\_\+Байкала}}~ostream
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_af95753ab50b3a870ed7e79b2a4bda2f7}{отток\+\_\+Байкала}}~istream
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_a6ae6d9224758ef556df972b58dfd21bd}{меняло}}~std\+::swap
+\item 
+\#define \mbox{\hyperlink{_be__krest__krest_8h_abb1e8a694dbe69d50d2822695440abd7}{отщипнуть}}~get
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Переменные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{_be__krest__krest_8h_ae072712c87b5379f2212d447043a2224}{целина}} = int
+\item 
+\mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{_be__krest__krest_8h_ad42e5840459b38a8b3b6fbd64b0a2307}{вель\+\_\+дробь}} = double
+\item 
+\mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{_be__krest__krest_8h_a350debe9ae7e0d0877ea17752671e05b}{малый\+\_\+дробь}} = float
+\item 
+\mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{_be__krest__krest_8h_a630684ccb37329b5a263c3474871c441}{буква}} = char
+\item 
+\mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{_be__krest__krest_8h_adc844cac58a054924f6d00c487366950}{много\+\_\+букав}} = Русь\+::string
+\item 
+\mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{_be__krest__krest_8h_a4bbe312df5088b5033c96c1cca332833}{бестолочь}} = void
+\item 
+\mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{_be__krest__krest_8h_a5e1e499dacc8778e2f244b3659b71c5b}{карлик}} = short
+\item 
+\mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{_be__krest__krest_8h_af2f77bc17f79717e842bffea351eb14a}{долговязый}} = long
+\item 
+\mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{_be__krest__krest_8h_a1725c8de9cdaf3418842d3e0e80cc7af}{Петр\+\_\+Первый}} = long long
+\item 
+\mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{_be__krest__krest_8h_a91daf410472b954e16e8aa9a5f4a41e6}{мерило}} = size\+\_\+t
+\item 
+\mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{_be__krest__krest_8h_a21ba60646a3de62646c07588c5a1e777}{розсуд}} = bool
+\item 
+\mbox{\hyperlink{_be__krest__krest_8h_af0fcf5353fc9dc05ca5f6e9df19419ab}{перепись}} \mbox{\hyperlink{_be__krest__krest_8h_a27fb562d01dfa5dada5532eef71420c3}{счёт\+\_\+древних\+\_\+русов}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Макросы}
+\Hypertarget{_be__krest__krest_8h_a7456b2d6ac8c8d496b4ba6f5076b9acc}\label{_be__krest__krest_8h_a7456b2d6ac8c8d496b4ba6f5076b9acc} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!НИЧТО@{НИЧТО}}
+\index{НИЧТО@{НИЧТО}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{НИЧТО}{НИЧТО}}
+{\footnotesize\ttfamily \#define НИЧТО~NULL}
+
+\Hypertarget{_be__krest__krest_8h_ad49b174cb159db28f9d49e20780c3a81}\label{_be__krest__krest_8h_ad49b174cb159db28f9d49e20780c3a81} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!Русь@{Русь}}
+\index{Русь@{Русь}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{Русь}{Русь}}
+{\footnotesize\ttfamily \#define Русь~std}
+
+\Hypertarget{_be__krest__krest_8h_a28fce16b9f2c9bb144367d9e7ab46af8}\label{_be__krest__krest_8h_a28fce16b9f2c9bb144367d9e7ab46af8} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!аки@{аки}}
+\index{аки@{аки}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{аки}{аки}}
+{\footnotesize\ttfamily \#define аки~static\+\_\+cast}
+
+\Hypertarget{_be__krest__krest_8h_a2a63b748bbcd94ba93201013b1912df7}\label{_be__krest__krest_8h_a2a63b748bbcd94ba93201013b1912df7} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!базированно@{базированно}}
+\index{базированно@{базированно}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{базированно}{базированно}}
+{\footnotesize\ttfamily \#define базированно~default}
+
+\Hypertarget{_be__krest__krest_8h_a7e7bc282e577a863a7b1d1fb95ed025c}\label{_be__krest__krest_8h_a7e7bc282e577a863a7b1d1fb95ed025c} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!бить\_ящеров@{бить\_ящеров}}
+\index{бить\_ящеров@{бить\_ящеров}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{бить\_ящеров}{бить\_ящеров}}
+{\footnotesize\ttfamily \#define бить\+\_\+ящеров~break}
+
+\Hypertarget{_be__krest__krest_8h_a73693708ec687a3129e882ddd734cae5}\label{_be__krest__krest_8h_a73693708ec687a3129e882ddd734cae5} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!ватага@{ватага}}
+\index{ватага@{ватага}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{ватага}{ватага}}
+{\footnotesize\ttfamily \#define ватага~array}
+
+\Hypertarget{_be__krest__krest_8h_a37bf7c212650a89119c1db79141bed27}\label{_be__krest__krest_8h_a37bf7c212650a89119c1db79141bed27} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!взаимная\_хронология@{взаимная\_хронология}}
+\index{взаимная\_хронология@{взаимная\_хронология}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{взаимная\_хронология}{взаимная\_хронология}}
+{\footnotesize\ttfamily \#define взаимная\+\_\+хронология~deque}
+
+\Hypertarget{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}\label{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!внедрить@{внедрить}}
+\index{внедрить@{внедрить}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{внедрить}{внедрить}}
+{\footnotesize\ttfamily \#define внедрить~using}
+
+\Hypertarget{_be__krest__krest_8h_acf70a90667dc9a19f3f11add4fb9785e}\label{_be__krest__krest_8h_acf70a90667dc9a19f3f11add4fb9785e} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!внемлить@{внемлить}}
+\index{внемлить@{внемлить}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{внемлить}{внемлить}}
+{\footnotesize\ttfamily \#define внемлить~cin}
+
+\Hypertarget{_be__krest__krest_8h_acc55363a897c2f112aec51342776d391}\label{_be__krest__krest_8h_acc55363a897c2f112aec51342776d391} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!воздать@{воздать}}
+\index{воздать@{воздать}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{воздать}{воздать}}
+{\footnotesize\ttfamily \#define воздать~return}
+
+\Hypertarget{_be__krest__krest_8h_a39fda408790451df76620a2aec8a93dd}\label{_be__krest__krest_8h_a39fda408790451df76620a2aec8a93dd} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!волочить@{волочить}}
+\index{волочить@{волочить}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{волочить}{волочить}}
+{\footnotesize\ttfamily \#define волочить~move}
+
+\Hypertarget{_be__krest__krest_8h_a96abdc9e7eb55ffd22381cbe6b552774}\label{_be__krest__krest_8h_a96abdc9e7eb55ffd22381cbe6b552774} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!ворох@{ворох}}
+\index{ворох@{ворох}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{ворох}{ворох}}
+{\footnotesize\ttfamily \#define ворох~stack}
+
+\Hypertarget{_be__krest__krest_8h_a2d9995645a411d3a61ba75a502fa3bf1}\label{_be__krest__krest_8h_a2d9995645a411d3a61ba75a502fa3bf1} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!вот\_и\_сказочке\_конец@{вот\_и\_сказочке\_конец}}
+\index{вот\_и\_сказочке\_конец@{вот\_и\_сказочке\_конец}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{вот\_и\_сказочке\_конец}{вот\_и\_сказочке\_конец}}
+{\footnotesize\ttfamily \#define вот\+\_\+и\+\_\+сказочке\+\_\+конец~eof}
+
+\Hypertarget{_be__krest__krest_8h_aae44fac75ad2e775fcc97f978e7d301d}\label{_be__krest__krest_8h_aae44fac75ad2e775fcc97f978e7d301d} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!вск@{вск}}
+\index{вск@{вск}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{вск}{вск}}
+{\footnotesize\ttfamily \#define вск~eof}
+
+\Hypertarget{_be__krest__krest_8h_a7737705fb9db6bb8ee789b7e83e558da}\label{_be__krest__krest_8h_a7737705fb9db6bb8ee789b7e83e558da} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!встрой@{встрой}}
+\index{встрой@{встрой}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{встрой}{встрой}}
+{\footnotesize\ttfamily \#define встрой~inline}
+
+\Hypertarget{_be__krest__krest_8h_a54a7b29bb6a415a257dde9060ee766b5}\label{_be__krest__krest_8h_a54a7b29bb6a415a257dde9060ee766b5} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!всякий@{всякий}}
+\index{всякий@{всякий}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{всякий}{всякий}}
+{\footnotesize\ttfamily \#define всякий~for\+\_\+each}
+
+\Hypertarget{_be__krest__krest_8h_acdcdf3c5be71fa14122cdc644473bc67}\label{_be__krest__krest_8h_acdcdf3c5be71fa14122cdc644473bc67} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!второй@{второй}}
+\index{второй@{второй}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{второй}{второй}}
+{\footnotesize\ttfamily \#define второй~second}
+
+\Hypertarget{_be__krest__krest_8h_a23e1d290f5d3d89761d4b1a66f9d92f7}\label{_be__krest__krest_8h_a23e1d290f5d3d89761d4b1a66f9d92f7} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!гнев\_Перуна@{гнев\_Перуна}}
+\index{гнев\_Перуна@{гнев\_Перуна}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{гнев\_Перуна}{гнев\_Перуна}}
+{\footnotesize\ttfamily \#define гнев\+\_\+Перуна~exception}
+
+\Hypertarget{_be__krest__krest_8h_a050296df844f02a522bb0a453dcecd4a}\label{_be__krest__krest_8h_a050296df844f02a522bb0a453dcecd4a} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!династия@{династия}}
+\index{династия@{династия}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{династия}{династия}}
+{\footnotesize\ttfamily \#define династия~class}
+
+\Hypertarget{_be__krest__krest_8h_ad189d5deb3d457bc413406ee0c4da732}\label{_be__krest__krest_8h_ad189d5deb3d457bc413406ee0c4da732} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!для@{для}}
+\index{для@{для}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{для}{для}}
+{\footnotesize\ttfamily \#define для~for}
+
+\Hypertarget{_be__krest__krest_8h_a1c30939f331a91df5b19787fb525dc5c}\label{_be__krest__krest_8h_a1c30939f331a91df5b19787fb525dc5c} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!добить\_ящеров@{добить\_ящеров}}
+\index{добить\_ящеров@{добить\_ящеров}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{добить\_ящеров}{добить\_ящеров}}
+{\footnotesize\ttfamily \#define добить\+\_\+ящеров~continue}
+
+\Hypertarget{_be__krest__krest_8h_af56754ad13372882ae2ccffae9c73eaf}\label{_be__krest__krest_8h_af56754ad13372882ae2ccffae9c73eaf} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!добрый\_молодец@{добрый\_молодец}}
+\index{добрый\_молодец@{добрый\_молодец}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{добрый\_молодец}{добрый\_молодец}}
+{\footnotesize\ttfamily \#define добрый\+\_\+молодец~good}
+
+\Hypertarget{_be__krest__krest_8h_a26cdbc5c11f4b3e7c0efbcb596a4d98b}\label{_be__krest__krest_8h_a26cdbc5c11f4b3e7c0efbcb596a4d98b} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!друже@{друже}}
+\index{друже@{друже}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{друже}{друже}}
+{\footnotesize\ttfamily \#define друже~friend}
+
+\Hypertarget{_be__krest__krest_8h_a89ddf461d65bfe3ab40879ad2198cbaf}\label{_be__krest__krest_8h_a89ddf461d65bfe3ab40879ad2198cbaf} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!дружина@{дружина}}
+\index{дружина@{дружина}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{дружина}{дружина}}
+{\footnotesize\ttfamily \#define дружина~set}
+
+\Hypertarget{_be__krest__krest_8h_a97518bf59ecd16ead4d61c9e744e7e8c}\label{_be__krest__krest_8h_a97518bf59ecd16ead4d61c9e744e7e8c} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!дружинный@{дружинный}}
+\index{дружинный@{дружинный}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{дружинный}{дружинный}}
+{\footnotesize\ttfamily \#define дружинный~protected}
+
+\Hypertarget{_be__krest__krest_8h_a3010b90679a6d9411af7352a26bebb24}\label{_be__krest__krest_8h_a3010b90679a6d9411af7352a26bebb24} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!закупорить@{закупорить}}
+\index{закупорить@{закупорить}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{закупорить}{закупорить}}
+{\footnotesize\ttfamily \#define закупорить~close}
+
+\Hypertarget{_be__krest__krest_8h_a4e2ba7c27285dcc760f64c0e1f8a6c63}\label{_be__krest__krest_8h_a4e2ba7c27285dcc760f64c0e1f8a6c63} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!зачерпнуть@{зачерпнуть}}
+\index{зачерпнуть@{зачерпнуть}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{зачерпнуть}{зачерпнуть}}
+{\footnotesize\ttfamily \#define зачерпнуть~getline}
+
+\Hypertarget{_be__krest__krest_8h_a143f07b5ea548f6fe3c6a423e118b725}\label{_be__krest__krest_8h_a143f07b5ea548f6fe3c6a423e118b725} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!змей\_подколодный@{змей\_подколодный}}
+\index{змей\_подколодный@{змей\_подколодный}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{змей\_подколодный}{змей\_подколодный}}
+{\footnotesize\ttfamily \#define змей\+\_\+подколодный~fail}
+
+\Hypertarget{_be__krest__krest_8h_ae25eb8c6917601460a4f221fdb837494}\label{_be__krest__krest_8h_ae25eb8c6917601460a4f221fdb837494} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!изгнать@{изгнать}}
+\index{изгнать@{изгнать}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{изгнать}{изгнать}}
+{\footnotesize\ttfamily \#define изгнать~remove}
+
+\Hypertarget{_be__krest__krest_8h_a782a73f5d65f57c3be282da099a677eb}\label{_be__krest__krest_8h_a782a73f5d65f57c3be282da099a677eb} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!изгнать\_ли@{изгнать\_ли}}
+\index{изгнать\_ли@{изгнать\_ли}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{изгнать\_ли}{изгнать\_ли}}
+{\footnotesize\ttfamily \#define изгнать\+\_\+ли~remove\+\_\+if}
+
+\Hypertarget{_be__krest__krest_8h_a4bb2a8f74cb8195c2a56054202b6524d}\label{_be__krest__krest_8h_a4bb2a8f74cb8195c2a56054202b6524d} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!казнь@{казнь}}
+\index{казнь@{казнь}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{казнь}{казнь}}
+{\footnotesize\ttfamily \#define казнь~delete}
+
+\Hypertarget{_be__krest__krest_8h_a9dcc834c2e652b32f4e195ea6820fa7f}\label{_be__krest__krest_8h_a9dcc834c2e652b32f4e195ea6820fa7f} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!карта@{карта}}
+\index{карта@{карта}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{карта}{карта}}
+{\footnotesize\ttfamily \#define карта~map}
+
+\Hypertarget{_be__krest__krest_8h_ade6bad707a19f9b7f0c4b6f55f903d2f}\label{_be__krest__krest_8h_ade6bad707a19f9b7f0c4b6f55f903d2f} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!коли@{коли}}
+\index{коли@{коли}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{коли}{коли}}
+{\footnotesize\ttfamily \#define коли~if}
+
+\Hypertarget{_be__krest__krest_8h_a78e08e29eb47ca97c8fd747af0e89bee}\label{_be__krest__krest_8h_a78e08e29eb47ca97c8fd747af0e89bee} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!кощей@{кощей}}
+\index{кощей@{кощей}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{кощей}{кощей}}
+{\footnotesize\ttfamily \#define кощей~static}
+
+\Hypertarget{_be__krest__krest_8h_ade5e6e7fa91510a342c2e9e9a7cb00f2}\label{_be__krest__krest_8h_ade5e6e7fa91510a342c2e9e9a7cb00f2} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!кривда@{кривда}}
+\index{кривда@{кривда}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{кривда}{кривда}}
+{\footnotesize\ttfamily \#define кривда~false}
+
+\Hypertarget{_be__krest__krest_8h_a3ec4dac01636048107b4046a00189079}\label{_be__krest__krest_8h_a3ec4dac01636048107b4046a00189079} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!летопись@{летопись}}
+\index{летопись@{летопись}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{летопись}{летопись}}
+{\footnotesize\ttfamily \#define летопись~fstream}
+
+\Hypertarget{_be__krest__krest_8h_acdc8860b1d3a02be731aeb4bd9ddcd81}\label{_be__krest__krest_8h_acdc8860b1d3a02be731aeb4bd9ddcd81} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!махнуть@{махнуть}}
+\index{махнуть@{махнуть}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{махнуть}{махнуть}}
+{\footnotesize\ttfamily \#define махнуть~swap}
+
+\Hypertarget{_be__krest__krest_8h_a715c93e54dc2c358ad0bf05e46286e51}\label{_be__krest__krest_8h_a715c93e54dc2c358ad0bf05e46286e51} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!махнуть\_ли@{махнуть\_ли}}
+\index{махнуть\_ли@{махнуть\_ли}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{махнуть\_ли}{махнуть\_ли}}
+{\footnotesize\ttfamily \#define махнуть\+\_\+ли~swap\+\_\+if}
+
+\Hypertarget{_be__krest__krest_8h_a6ae6d9224758ef556df972b58dfd21bd}\label{_be__krest__krest_8h_a6ae6d9224758ef556df972b58dfd21bd} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!меняло@{меняло}}
+\index{меняло@{меняло}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{меняло}{меняло}}
+{\footnotesize\ttfamily \#define меняло~std\+::swap}
+
+\Hypertarget{_be__krest__krest_8h_a96b1370199c9f13bfe92e68d3566b253}\label{_be__krest__krest_8h_a96b1370199c9f13bfe92e68d3566b253} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!могущественный@{могущественный}}
+\index{могущественный@{могущественный}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{могущественный}{могущественный}}
+{\footnotesize\ttfamily \#define могущественный~max}
+
+\Hypertarget{_be__krest__krest_8h_a24ca3f462255073e17b3246c08893343}\label{_be__krest__krest_8h_a24ca3f462255073e17b3246c08893343} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!молвить@{молвить}}
+\index{молвить@{молвить}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{молвить}{молвить}}
+{\footnotesize\ttfamily \#define молвить~cout}
+
+\Hypertarget{_be__krest__krest_8h_a635d6f26675e0e5679a0de336778610b}\label{_be__krest__krest_8h_a635d6f26675e0e5679a0de336778610b} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!мощь@{мощь}}
+\index{мощь@{мощь}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{мощь}{мощь}}
+{\footnotesize\ttfamily \#define мощь~pow}
+
+\Hypertarget{_be__krest__krest_8h_a259fbf8d09fcbfb9a23ce40cae017723}\label{_be__krest__krest_8h_a259fbf8d09fcbfb9a23ce40cae017723} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!найти\_гибель@{найти\_гибель}}
+\index{найти\_гибель@{найти\_гибель}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{найти\_гибель}{найти\_гибель}}
+{\footnotesize\ttfamily \#define найти\+\_\+гибель~find\+\_\+end}
+
+\Hypertarget{_be__krest__krest_8h_afb4a147371cb888c8a3bb6ccd7f720a1}\label{_be__krest__krest_8h_afb4a147371cb888c8a3bb6ccd7f720a1} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!народный@{народный}}
+\index{народный@{народный}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{народный}{народный}}
+{\footnotesize\ttfamily \#define народный~public}
+
+\Hypertarget{_be__krest__krest_8h_ab46cdf206b3380b3c77571f790e08cce}\label{_be__krest__krest_8h_ab46cdf206b3380b3c77571f790e08cce} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!несравнимый@{несравнимый}}
+\index{несравнимый@{несравнимый}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{несравнимый}{несравнимый}}
+{\footnotesize\ttfamily \#define несравнимый~unique}
+
+\Hypertarget{_be__krest__krest_8h_a6e2c25e9e8d6141ae6c9ab8644a54551}\label{_be__krest__krest_8h_a6e2c25e9e8d6141ae6c9ab8644a54551} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!ничтожный@{ничтожный}}
+\index{ничтожный@{ничтожный}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{ничтожный}{ничтожный}}
+{\footnotesize\ttfamily \#define ничтожный~min}
+
+\Hypertarget{_be__krest__krest_8h_a7e0fd3970483994b7d5dbb0f4453161b}\label{_be__krest__krest_8h_a7e0fd3970483994b7d5dbb0f4453161b} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!новь@{новь}}
+\index{новь@{новь}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{новь}{новь}}
+{\footnotesize\ttfamily \#define новь~new}
+
+\Hypertarget{_be__krest__krest_8h_a19b5bde1bd25fd5496fb36deefff56f1}\label{_be__krest__krest_8h_a19b5bde1bd25fd5496fb36deefff56f1} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!однобокий@{однобокий}}
+\index{однобокий@{однобокий}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{однобокий}{однобокий}}
+{\footnotesize\ttfamily \#define однобокий~unsigned}
+
+\Hypertarget{_be__krest__krest_8h_a4870965f4330c0d750f29ed090bfe1f5}\label{_be__krest__krest_8h_a4870965f4330c0d750f29ed090bfe1f5} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!окстись@{окстись}}
+\index{окстись@{окстись}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{окстись}{окстись}}
+{\footnotesize\ttfamily \#define окстись~goto}
+
+\Hypertarget{_be__krest__krest_8h_ab8d545574f12722e645c10fab2b67bfa}\label{_be__krest__krest_8h_ab8d545574f12722e645c10fab2b67bfa} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!откупорить@{откупорить}}
+\index{откупорить@{откупорить}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{откупорить}{откупорить}}
+{\footnotesize\ttfamily \#define откупорить~open}
+
+\Hypertarget{_be__krest__krest_8h_a5f425ac59931d04b73618f34f4815e1b}\label{_be__krest__krest_8h_a5f425ac59931d04b73618f34f4815e1b} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!отнюдь@{отнюдь}}
+\index{отнюдь@{отнюдь}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{отнюдь}{отнюдь}}
+{\footnotesize\ttfamily \#define отнюдь~else}
+
+\Hypertarget{_be__krest__krest_8h_af95753ab50b3a870ed7e79b2a4bda2f7}\label{_be__krest__krest_8h_af95753ab50b3a870ed7e79b2a4bda2f7} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!отток\_Байкала@{отток\_Байкала}}
+\index{отток\_Байкала@{отток\_Байкала}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{отток\_Байкала}{отток\_Байкала}}
+{\footnotesize\ttfamily \#define отток\+\_\+Байкала~istream}
+
+\Hypertarget{_be__krest__krest_8h_abb1e8a694dbe69d50d2822695440abd7}\label{_be__krest__krest_8h_abb1e8a694dbe69d50d2822695440abd7} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!отщипнуть@{отщипнуть}}
+\index{отщипнуть@{отщипнуть}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{отщипнуть}{отщипнуть}}
+{\footnotesize\ttfamily \#define отщипнуть~get}
+
+\Hypertarget{_be__krest__krest_8h_aeeaff94303ca4382e30f164b66428faa}\label{_be__krest__krest_8h_aeeaff94303ca4382e30f164b66428faa} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!очами\_стрельнуть@{очами\_стрельнуть}}
+\index{очами\_стрельнуть@{очами\_стрельнуть}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{очами\_стрельнуть}{очами\_стрельнуть}}
+{\footnotesize\ttfamily \#define очами\+\_\+стрельнуть~peek}
+
+\Hypertarget{_be__krest__krest_8h_a6ae6587dc1142ae9e30dc0e02ad94021}\label{_be__krest__krest_8h_a6ae6587dc1142ae9e30dc0e02ad94021} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!пахать@{пахать}}
+\index{пахать@{пахать}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{пахать}{пахать}}
+{\footnotesize\ttfamily \#define пахать~do}
+
+\Hypertarget{_be__krest__krest_8h_a2f849fb7b0d210fa42027d98495de730}\label{_be__krest__krest_8h_a2f849fb7b0d210fa42027d98495de730} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!первый@{первый}}
+\index{первый@{первый}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{первый}{первый}}
+{\footnotesize\ttfamily \#define первый~first}
+
+\Hypertarget{_be__krest__krest_8h_a9e275e5cd3b4dd9997acc523551f30f1}\label{_be__krest__krest_8h_a9e275e5cd3b4dd9997acc523551f30f1} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!переворошить@{переворошить}}
+\index{переворошить@{переворошить}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{переворошить}{переворошить}}
+{\footnotesize\ttfamily \#define переворошить~transform}
+
+\Hypertarget{_be__krest__krest_8h_af0fcf5353fc9dc05ca5f6e9df19419ab}\label{_be__krest__krest_8h_af0fcf5353fc9dc05ca5f6e9df19419ab} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!перепись@{перепись}}
+\index{перепись@{перепись}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{перепись}{перепись}}
+{\footnotesize\ttfamily \#define перепись~enum}
+
+\Hypertarget{_be__krest__krest_8h_a27603ed4b091a519fe4acf35a02162c7}\label{_be__krest__krest_8h_a27603ed4b091a519fe4acf35a02162c7} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!писать\_летопись@{писать\_летопись}}
+\index{писать\_летопись@{писать\_летопись}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{писать\_летопись}{писать\_летопись}}
+{\footnotesize\ttfamily \#define писать\+\_\+летопись~ofstream}
+
+\Hypertarget{_be__krest__krest_8h_ac9dee8da09cd5b26c0901be61bf97a38}\label{_be__krest__krest_8h_ac9dee8da09cd5b26c0901be61bf97a38} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!поворотить@{поворотить}}
+\index{поворотить@{поворотить}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{поворотить}{поворотить}}
+{\footnotesize\ttfamily \#define поворотить~reverse}
+
+\Hypertarget{_be__krest__krest_8h_af7c38fb61ef52c16cc657b929665059f}\label{_be__krest__krest_8h_af7c38fb61ef52c16cc657b929665059f} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!подменить@{подменить}}
+\index{подменить@{подменить}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{подменить}{подменить}}
+{\footnotesize\ttfamily \#define подменить~replace}
+
+\Hypertarget{_be__krest__krest_8h_a745baf599838a17c37521efd36dd20df}\label{_be__krest__krest_8h_a745baf599838a17c37521efd36dd20df} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!подменить\_ли@{подменить\_ли}}
+\index{подменить\_ли@{подменить\_ли}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{подменить\_ли}{подменить\_ли}}
+{\footnotesize\ttfamily \#define подменить\+\_\+ли~replace\+\_\+if}
+
+\Hypertarget{_be__krest__krest_8h_a0a810ed899c058eaa06eba5a2445eba4}\label{_be__krest__krest_8h_a0a810ed899c058eaa06eba5a2445eba4} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!поймать\_ящера@{поймать\_ящера}}
+\index{поймать\_ящера@{поймать\_ящера}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{поймать\_ящера}{поймать\_ящера}}
+{\footnotesize\ttfamily \#define поймать\+\_\+ящера~catch}
+
+\Hypertarget{_be__krest__krest_8h_a675f3871e7102465a328723671ba1a5d}\label{_be__krest__krest_8h_a675f3871e7102465a328723671ba1a5d} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!покуда@{покуда}}
+\index{покуда@{покуда}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{покуда}{покуда}}
+{\footnotesize\ttfamily \#define покуда~while}
+
+\Hypertarget{_be__krest__krest_8h_af451ea8703ad14b8bc266d928316fefa}\label{_be__krest__krest_8h_af451ea8703ad14b8bc266d928316fefa} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!получи\_басурман@{получи\_басурман}}
+\index{получи\_басурман@{получи\_басурман}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{получи\_басурман}{получи\_басурман}}
+{\footnotesize\ttfamily \#define получи\+\_\+басурман~throw}
+
+\Hypertarget{_be__krest__krest_8h_ac0379c71d68e297b06abcb3a6cea7eaf}\label{_be__krest__krest_8h_ac0379c71d68e297b06abcb3a6cea7eaf} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!попятная\_рисовка@{попятная\_рисовка}}
+\index{попятная\_рисовка@{попятная\_рисовка}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{попятная\_рисовка}{попятная\_рисовка}}
+{\footnotesize\ttfamily \#define попятная\+\_\+рисовка~reverse\+\_\+copy}
+
+\Hypertarget{_be__krest__krest_8h_ae4a8918602a68a52b7ce7e760e3eb041}\label{_be__krest__krest_8h_ae4a8918602a68a52b7ce7e760e3eb041} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!почин@{почин}}
+\index{почин@{почин}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{почин}{почин}}
+{\footnotesize\ttfamily \#define почин~begin}
+
+\Hypertarget{_be__krest__krest_8h_a6e1ab23dea3ca45b9ac0532716d43f31}\label{_be__krest__krest_8h_a6e1ab23dea3ca45b9ac0532716d43f31} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!правда@{правда}}
+\index{правда@{правда}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{правда}{правда}}
+{\footnotesize\ttfamily \#define правда~true}
+
+\Hypertarget{_be__krest__krest_8h_a5705d63c3dc0eec0c499eb871be4c7dd}\label{_be__krest__krest_8h_a5705d63c3dc0eec0c499eb871be4c7dd} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!приказ\_княжий@{приказ\_княжий}}
+\index{приказ\_княжий@{приказ\_княжий}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{приказ\_княжий}{приказ\_княжий}}
+{\footnotesize\ttfamily \#define приказ\+\_\+княжий~const}
+
+\Hypertarget{_be__krest__krest_8h_a577a811dad3c75c0c79489a3db910f1d}\label{_be__krest__krest_8h_a577a811dad3c75c0c79489a3db910f1d} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!приписать\_сзади@{приписать\_сзади}}
+\index{приписать\_сзади@{приписать\_сзади}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{приписать\_сзади}{приписать\_сзади}}
+{\footnotesize\ttfamily \#define приписать\+\_\+сзади~push\+\_\+back}
+
+\Hypertarget{_be__krest__krest_8h_a4fa162885539f03ce138d7ca7df19757}\label{_be__krest__krest_8h_a4fa162885539f03ce138d7ca7df19757} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!приток\_Байкала@{приток\_Байкала}}
+\index{приток\_Байкала@{приток\_Байкала}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{приток\_Байкала}{приток\_Байкала}}
+{\footnotesize\ttfamily \#define приток\+\_\+Байкала~ostream}
+
+\Hypertarget{_be__krest__krest_8h_acef7c4e97308a2b7b50d6eb0ae2f13c6}\label{_be__krest__krest_8h_acef7c4e97308a2b7b50d6eb0ae2f13c6} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!прыг\_скок@{прыг\_скок}}
+\index{прыг\_скок@{прыг\_скок}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{прыг\_скок}{прыг\_скок}}
+{\footnotesize\ttfamily \#define прыг\+\_\+скок~endl}
+
+\Hypertarget{_be__krest__krest_8h_a450fb7d9df41db301538710855e408d4}\label{_be__krest__krest_8h_a450fb7d9df41db301538710855e408d4} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!путевой\_камень@{путевой\_камень}}
+\index{путевой\_камень@{путевой\_камень}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{путевой\_камень}{путевой\_камень}}
+{\footnotesize\ttfamily \#define путевой\+\_\+камень~switch}
+
+\Hypertarget{_be__krest__krest_8h_aa2415130612292570eb2128fc242ed1b}\label{_be__krest__krest_8h_aa2415130612292570eb2128fc242ed1b} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!путь@{путь}}
+\index{путь@{путь}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{путь}{путь}}
+{\footnotesize\ttfamily \#define путь~case}
+
+\Hypertarget{_be__krest__krest_8h_a86d22ee3e3537c0bddb9566c0031bd98}\label{_be__krest__krest_8h_a86d22ee3e3537c0bddb9566c0031bd98} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!пытать\_ящера@{пытать\_ящера}}
+\index{пытать\_ящера@{пытать\_ящера}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{пытать\_ящера}{пытать\_ящера}}
+{\footnotesize\ttfamily \#define пытать\+\_\+ящера~try}
+
+\Hypertarget{_be__krest__krest_8h_a9320c1bda7e9a46091b24b2032e75f9d}\label{_be__krest__krest_8h_a9320c1bda7e9a46091b24b2032e75f9d} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!размах@{размах}}
+\index{размах@{размах}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{размах}{размах}}
+{\footnotesize\ttfamily \#define размах~sizeof}
+
+\Hypertarget{_be__krest__krest_8h_afce52c8ac5d95b47921766d4c6af83cd}\label{_be__krest__krest_8h_afce52c8ac5d95b47921766d4c6af83cd} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!размер@{размер}}
+\index{размер@{размер}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{размер}{размер}}
+{\footnotesize\ttfamily \#define размер~size}
+
+\Hypertarget{_be__krest__krest_8h_aa6ae0a233ff0b5efed5502688b914520}\label{_be__krest__krest_8h_aa6ae0a233ff0b5efed5502688b914520} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!регистр@{регистр}}
+\index{регистр@{регистр}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{регистр}{регистр}}
+{\footnotesize\ttfamily \#define регистр~list}
+
+\Hypertarget{_be__krest__krest_8h_a8794be5af25cbdebf39b4ea02ddbfd84}\label{_be__krest__krest_8h_a8794be5af25cbdebf39b4ea02ddbfd84} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!руби\_пополам@{руби\_пополам}}
+\index{руби\_пополам@{руби\_пополам}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{руби\_пополам}{руби\_пополам}}
+{\footnotesize\ttfamily \#define руби\+\_\+пополам~binary\+\_\+search}
+
+\Hypertarget{_be__krest__krest_8h_a37b3d3d43f0911c5c69f5e5d658f991d}\label{_be__krest__krest_8h_a37b3d3d43f0911c5c69f5e5d658f991d} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!свергнуть@{свергнуть}}
+\index{свергнуть@{свергнуть}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{свергнуть}{свергнуть}}
+{\footnotesize\ttfamily \#define свергнуть~advance}
+
+\Hypertarget{_be__krest__krest_8h_a44aab7765ddf23146d21788a19819873}\label{_be__krest__krest_8h_a44aab7765ddf23146d21788a19819873} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!свет\_мой\_зеркальце@{свет\_мой\_зеркальце}}
+\index{свет\_мой\_зеркальце@{свет\_мой\_зеркальце}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{свет\_мой\_зеркальце}{свет\_мой\_зеркальце}}
+{\footnotesize\ttfamily \#define свет\+\_\+мой\+\_\+зеркальце~template}
+
+\Hypertarget{_be__krest__krest_8h_a73b6f8291b3c26d1133ec41d37a19d9a}\label{_be__krest__krest_8h_a73b6f8291b3c26d1133ec41d37a19d9a} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!семейство@{семейство}}
+\index{семейство@{семейство}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{семейство}{семейство}}
+{\footnotesize\ttfamily \#define семейство~struct}
+
+\Hypertarget{_be__krest__krest_8h_a8293733d24c1da8592d7759c72980292}\label{_be__krest__krest_8h_a8293733d24c1da8592d7759c72980292} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!скажи@{скажи}}
+\index{скажи@{скажи}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{скажи}{скажи}}
+{\footnotesize\ttfamily \#define скажи~typename}
+
+\Hypertarget{_be__krest__krest_8h_a59ed8deba49ce71f727d22440dbe38d2}\label{_be__krest__krest_8h_a59ed8deba49ce71f727d22440dbe38d2} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!сладить@{сладить}}
+\index{сладить@{сладить}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{сладить}{сладить}}
+{\footnotesize\ttfamily \#define сладить~sort}
+
+\Hypertarget{_be__krest__krest_8h_a5874c8290ecdc297a18c1bcb3a704ef6}\label{_be__krest__krest_8h_a5874c8290ecdc297a18c1bcb3a704ef6} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!слаженный\_ли@{слаженный\_ли}}
+\index{слаженный\_ли@{слаженный\_ли}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{слаженный\_ли}{слаженный\_ли}}
+{\footnotesize\ttfamily \#define слаженный\+\_\+ли~is\+\_\+sorted}
+
+\Hypertarget{_be__krest__krest_8h_abfaacc255da91c336581355b89e88ccb}\label{_be__krest__krest_8h_abfaacc255da91c336581355b89e88ccb} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!сотворять@{сотворять}}
+\index{сотворять@{сотворять}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{сотворять}{сотворять}}
+{\footnotesize\ttfamily \#define сотворять~generate}
+
+\Hypertarget{_be__krest__krest_8h_a5b8886a994f410124bd3b6569ec4f796}\label{_be__krest__krest_8h_a5b8886a994f410124bd3b6569ec4f796} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!сплотить@{сплотить}}
+\index{сплотить@{сплотить}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{сплотить}{сплотить}}
+{\footnotesize\ttfamily \#define сплотить~merge}
+
+\Hypertarget{_be__krest__krest_8h_a66442400937bae9569f369cac240e9dd}\label{_be__krest__krest_8h_a66442400937bae9569f369cac240e9dd} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!срисовать@{срисовать}}
+\index{срисовать@{срисовать}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{срисовать}{срисовать}}
+{\footnotesize\ttfamily \#define срисовать~copy}
+
+\Hypertarget{_be__krest__krest_8h_a4b207709d5117383bdfc4394a5a45fe7}\label{_be__krest__krest_8h_a4b207709d5117383bdfc4394a5a45fe7} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!срисовать\_ли@{срисовать\_ли}}
+\index{срисовать\_ли@{срисовать\_ли}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{срисовать\_ли}{срисовать\_ли}}
+{\footnotesize\ttfamily \#define срисовать\+\_\+ли~copy\+\_\+if}
+
+\Hypertarget{_be__krest__krest_8h_ad130a22d834b9c47d4869156db947cae}\label{_be__krest__krest_8h_ad130a22d834b9c47d4869156db947cae} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!судьба@{судьба}}
+\index{судьба@{судьба}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{судьба}{судьба}}
+{\footnotesize\ttfamily \#define судьба~random}
+
+\Hypertarget{_be__krest__krest_8h_a19336bf93b56a48854913a2ac0e41b2a}\label{_be__krest__krest_8h_a19336bf93b56a48854913a2ac0e41b2a} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!суд\_Перуна@{суд\_Перуна}}
+\index{суд\_Перуна@{суд\_Перуна}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{суд\_Перуна}{суд\_Перуна}}
+{\footnotesize\ttfamily \#define суд\+\_\+Перуна~auto}
+
+\Hypertarget{_be__krest__krest_8h_ae20430ff7ccec6addc68e426dcf252dd}\label{_be__krest__krest_8h_ae20430ff7ccec6addc68e426dcf252dd} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!счесть@{счесть}}
+\index{счесть@{счесть}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{счесть}{счесть}}
+{\footnotesize\ttfamily \#define счесть~count}
+
+\Hypertarget{_be__krest__krest_8h_a9b2abe67abbcb261f0cea868bd825c36}\label{_be__krest__krest_8h_a9b2abe67abbcb261f0cea868bd825c36} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!счесть\_ли@{счесть\_ли}}
+\index{счесть\_ли@{счесть\_ли}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{счесть\_ли}{счесть\_ли}}
+{\footnotesize\ttfamily \#define счесть\+\_\+ли~count\+\_\+if}
+
+\Hypertarget{_be__krest__krest_8h_a0e18dca6375ab31a75ba22b941a9420d}\label{_be__krest__krest_8h_a0e18dca6375ab31a75ba22b941a9420d} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!сыскать@{сыскать}}
+\index{сыскать@{сыскать}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{сыскать}{сыскать}}
+{\footnotesize\ttfamily \#define сыскать~find}
+
+\Hypertarget{_be__krest__krest_8h_a39cfdaf609fc45ce5e3a1843b1dfa484}\label{_be__krest__krest_8h_a39cfdaf609fc45ce5e3a1843b1dfa484} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!сыскать\_ли@{сыскать\_ли}}
+\index{сыскать\_ли@{сыскать\_ли}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{сыскать\_ли}{сыскать\_ли}}
+{\footnotesize\ttfamily \#define сыскать\+\_\+ли~find\+\_\+if}
+
+\Hypertarget{_be__krest__krest_8h_ae3897f70875b94fe47999feab8e56d55}\label{_be__krest__krest_8h_ae3897f70875b94fe47999feab8e56d55} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!сыскать\_первого\_молодца@{сыскать\_первого\_молодца}}
+\index{сыскать\_первого\_молодца@{сыскать\_первого\_молодца}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{сыскать\_первого\_молодца}{сыскать\_первого\_молодца}}
+{\footnotesize\ttfamily \#define сыскать\+\_\+первого\+\_\+молодца~find\+\_\+first\+\_\+of}
+
+\Hypertarget{_be__krest__krest_8h_ae0736509d9bb8ef1498fac4c7506b1ba}\label{_be__krest__krest_8h_ae0736509d9bb8ef1498fac4c7506b1ba} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!туда\_не\_знаю\_куда@{туда\_не\_знаю\_куда}}
+\index{туда\_не\_знаю\_куда@{туда\_не\_знаю\_куда}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{туда\_не\_знаю\_куда}{туда\_не\_знаю\_куда}}
+{\footnotesize\ttfamily \#define туда\+\_\+не\+\_\+знаю\+\_\+куда~nullptr}
+
+\Hypertarget{_be__krest__krest_8h_a8f475446cebe86861136e34e9b85a73a}\label{_be__krest__krest_8h_a8f475446cebe86861136e34e9b85a73a} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!хана@{хана}}
+\index{хана@{хана}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{хана}{хана}}
+{\footnotesize\ttfamily \#define хана~end}
+
+\Hypertarget{_be__krest__krest_8h_a2447e2f0078feb7e627c1fed7f38b484}\label{_be__krest__krest_8h_a2447e2f0078feb7e627c1fed7f38b484} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!хронология@{хронология}}
+\index{хронология@{хронология}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{хронология}{хронология}}
+{\footnotesize\ttfamily \#define хронология~queue}
+
+\Hypertarget{_be__krest__krest_8h_a96820d86faf7f4ef119636d268c6f222}\label{_be__krest__krest_8h_a96820d86faf7f4ef119636d268c6f222} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!хутор@{хутор}}
+\index{хутор@{хутор}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{хутор}{хутор}}
+{\footnotesize\ttfamily \#define хутор~namespace}
+
+\Hypertarget{_be__krest__krest_8h_a91ee4c18af4b1beb9efeb7b77d31f2df}\label{_be__krest__krest_8h_a91ee4c18af4b1beb9efeb7b77d31f2df} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!царский@{царский}}
+\index{царский@{царский}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{царский}{царский}}
+{\footnotesize\ttfamily \#define царский~private}
+
+\Hypertarget{_be__krest__krest_8h_af767340336d541f43912cae2bbde68eb}\label{_be__krest__krest_8h_af767340336d541f43912cae2bbde68eb} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!царь\_батюшка\_главный@{царь\_батюшка\_главный}}
+\index{царь\_батюшка\_главный@{царь\_батюшка\_главный}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{царь\_батюшка\_главный}{царь\_батюшка\_главный}}
+{\footnotesize\ttfamily \#define царь\+\_\+батюшка\+\_\+главный~int main}
+
+\Hypertarget{_be__krest__krest_8h_ab197da4045aac218759c7349dbf3ce93}\label{_be__krest__krest_8h_ab197da4045aac218759c7349dbf3ce93} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!цепочка@{цепочка}}
+\index{цепочка@{цепочка}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{цепочка}{цепочка}}
+{\footnotesize\ttfamily \#define цепочка~vector}
+
+\Hypertarget{_be__krest__krest_8h_a2237596e71736d1aae0e0584575d77e4}\label{_be__krest__krest_8h_a2237596e71736d1aae0e0584575d77e4} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!чета@{чета}}
+\index{чета@{чета}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{чета}{чета}}
+{\footnotesize\ttfamily \#define чета~pair}
+
+\Hypertarget{_be__krest__krest_8h_a2736d1adec6b0e6572a9aa04934004ec}\label{_be__krest__krest_8h_a2736d1adec6b0e6572a9aa04934004ec} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!читать\_летопись@{читать\_летопись}}
+\index{читать\_летопись@{читать\_летопись}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{читать\_летопись}{читать\_летопись}}
+{\footnotesize\ttfamily \#define читать\+\_\+летопись~ifstream}
+
+\Hypertarget{_be__krest__krest_8h_a8369f9839accb2e518a775c45595ce48}\label{_be__krest__krest_8h_a8369f9839accb2e518a775c45595ce48} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!энный\_молодец@{энный\_молодец}}
+\index{энный\_молодец@{энный\_молодец}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{энный\_молодец}{энный\_молодец}}
+{\footnotesize\ttfamily \#define энный\+\_\+молодец~nth\+\_\+element}
+
+
+
+\doxysubsection{Переменные}
+\Hypertarget{_be__krest__krest_8h_a1725c8de9cdaf3418842d3e0e80cc7af}\label{_be__krest__krest_8h_a1725c8de9cdaf3418842d3e0e80cc7af} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!Петр\_Первый@{Петр\_Первый}}
+\index{Петр\_Первый@{Петр\_Первый}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{Петр\_Первый}{Петр\_Первый}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} Петр\+\_\+Первый = long long}
+
+\Hypertarget{_be__krest__krest_8h_a4bbe312df5088b5033c96c1cca332833}\label{_be__krest__krest_8h_a4bbe312df5088b5033c96c1cca332833} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!бестолочь@{бестолочь}}
+\index{бестолочь@{бестолочь}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{бестолочь}{бестолочь}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} бестолочь = void}
+
+\Hypertarget{_be__krest__krest_8h_a630684ccb37329b5a263c3474871c441}\label{_be__krest__krest_8h_a630684ccb37329b5a263c3474871c441} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!буква@{буква}}
+\index{буква@{буква}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{буква}{буква}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} буква = char}
+
+\Hypertarget{_be__krest__krest_8h_ad42e5840459b38a8b3b6fbd64b0a2307}\label{_be__krest__krest_8h_ad42e5840459b38a8b3b6fbd64b0a2307} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!вель\_дробь@{вель\_дробь}}
+\index{вель\_дробь@{вель\_дробь}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{вель\_дробь}{вель\_дробь}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} вель\+\_\+дробь = double}
+
+\Hypertarget{_be__krest__krest_8h_af2f77bc17f79717e842bffea351eb14a}\label{_be__krest__krest_8h_af2f77bc17f79717e842bffea351eb14a} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!долговязый@{долговязый}}
+\index{долговязый@{долговязый}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{долговязый}{долговязый}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} долговязый = long}
+
+\Hypertarget{_be__krest__krest_8h_a5e1e499dacc8778e2f244b3659b71c5b}\label{_be__krest__krest_8h_a5e1e499dacc8778e2f244b3659b71c5b} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!карлик@{карлик}}
+\index{карлик@{карлик}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{карлик}{карлик}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} карлик = short}
+
+\Hypertarget{_be__krest__krest_8h_a350debe9ae7e0d0877ea17752671e05b}\label{_be__krest__krest_8h_a350debe9ae7e0d0877ea17752671e05b} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!малый\_дробь@{малый\_дробь}}
+\index{малый\_дробь@{малый\_дробь}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{малый\_дробь}{малый\_дробь}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} малый\+\_\+дробь = float}
+
+\Hypertarget{_be__krest__krest_8h_a91daf410472b954e16e8aa9a5f4a41e6}\label{_be__krest__krest_8h_a91daf410472b954e16e8aa9a5f4a41e6} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!мерило@{мерило}}
+\index{мерило@{мерило}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{мерило}{мерило}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} мерило = size\+\_\+t}
+
+\Hypertarget{_be__krest__krest_8h_adc844cac58a054924f6d00c487366950}\label{_be__krest__krest_8h_adc844cac58a054924f6d00c487366950} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!много\_букав@{много\_букав}}
+\index{много\_букав@{много\_букав}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{много\_букав}{много\_букав}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} много\+\_\+букав = Русь\+::string}
+
+\Hypertarget{_be__krest__krest_8h_a21ba60646a3de62646c07588c5a1e777}\label{_be__krest__krest_8h_a21ba60646a3de62646c07588c5a1e777} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!розсуд@{розсуд}}
+\index{розсуд@{розсуд}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{розсуд}{розсуд}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} розсуд = bool}
+
+\Hypertarget{_be__krest__krest_8h_a27fb562d01dfa5dada5532eef71420c3}\label{_be__krest__krest_8h_a27fb562d01dfa5dada5532eef71420c3} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!счёт\_древних\_русов@{счёт\_древних\_русов}}
+\index{счёт\_древних\_русов@{счёт\_древних\_русов}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{счёт\_древних\_русов}{счёт\_древних\_русов}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_be__krest__krest_8h_af0fcf5353fc9dc05ca5f6e9df19419ab}{перепись}} счёт\+\_\+древних\+\_\+русов}
+
+{\bfseries Инициализатор}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\ ноль\ =\ 0,\ целковый\ =\ 1,\ полушка\ =\ 2,\ четвертушка\ =\ 3,\ осьмушка\ =\ 4,}
+\DoxyCodeLine{пудовичок\ =\ 5,\ медячок\ =\ 6,\ серебрячок\ =\ 7,\ золотничок\ =\ 8,\ девятичок\ =\ 9,\ десятичок\ =\ 10\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_be__krest__krest_8h_ae072712c87b5379f2212d447043a2224}\label{_be__krest__krest_8h_ae072712c87b5379f2212d447043a2224} 
+\index{Be\_krest\_krest.h@{Be\_krest\_krest.h}!целина@{целина}}
+\index{целина@{целина}!Be\_krest\_krest.h@{Be\_krest\_krest.h}}
+\doxysubsubsection{\texorpdfstring{целина}{целина}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_be__krest__krest_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} целина = int}
+

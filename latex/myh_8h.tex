@@ -1,0 +1,993 @@
+\doxysection{header/myh.h File Reference}
+\hypertarget{myh_8h}{}\label{myh_8h}\index{header/myh.h@{header/myh.h}}
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{myh_8h_a8176391956dd8f9916059e5ee4ac7aac}{сортировать}}~sort
+\item 
+\#define \mbox{\hyperlink{myh_8h_a9609eee61682cd41da46b039e0bc72ac}{начать}}~begin
+\item 
+\#define \mbox{\hyperlink{myh_8h_a8ca99f47d7414be646038a924afb86db}{конец}}~end
+\item 
+\#define \mbox{\hyperlink{myh_8h_a3be94c24267e7315e6575440a395daa9}{обратный}}~reverse
+\item 
+\#define \mbox{\hyperlink{myh_8h_aa4db11a15b78cb64ca04f11f2f011c42}{обратная\+\_\+копия}}~reverse\+\_\+copy
+\item 
+\#define \mbox{\hyperlink{myh_8h_a7fc23710fdbf45f0d2514bb85453dc59}{бинарный\+\_\+поиск}}~binary\+\_\+search
+\item 
+\#define \mbox{\hyperlink{myh_8h_ac9fb090ada6343ff88cab9171161b78e}{двигаться}}~move
+\item 
+\#define \mbox{\hyperlink{myh_8h_ac0c29017b004c59dee56de45ee17820a}{находить}}~find
+\item 
+\#define \mbox{\hyperlink{myh_8h_aec02c6ed2a06561d36256560ea314716}{продвигать}}~advance
+\item 
+\#define \mbox{\hyperlink{myh_8h_ab1af06d5e66529a2ceffdeb5dc74c27e}{копировать}}~copy
+\item 
+\#define \mbox{\hyperlink{myh_8h_a6daf9a4492c8d6b1d24d29150338f491}{копировать\+\_\+ли}}~copy\+\_\+if
+\item 
+\#define \mbox{\hyperlink{myh_8h_a86aa398b05c0c45fd55d47078e1594d0}{трансформировать}}~transform
+\item 
+\#define \mbox{\hyperlink{myh_8h_afd74230e1be6bb25bb440b2be1242a27}{генерировать}}~generate
+\item 
+\#define \mbox{\hyperlink{myh_8h_a1e68db830d18ce9e2a599504630b74f8}{удалить}}~remove
+\item 
+\#define \mbox{\hyperlink{myh_8h_a5d9f968c10afab58b8f6985cd62207a3}{удалить\+\_\+ли}}~remove\+\_\+if
+\item 
+\#define \mbox{\hyperlink{myh_8h_ab7a621b5c2439261dff5220742fdc00c}{заменять}}~replace
+\item 
+\#define \mbox{\hyperlink{myh_8h_a4477867c12f6222a576fcd1ba34ff689}{заменять\+\_\+ли}}~replace\+\_\+if
+\item 
+\#define \mbox{\hyperlink{myh_8h_ab2b35d43413b02092d3466f742d4ae25}{менять}}~swap
+\item 
+\#define \mbox{\hyperlink{myh_8h_a70049df80a6016acafe05aefc51f63c1}{менять\+\_\+ли}}~swap\+\_\+if
+\item 
+\#define \mbox{\hyperlink{myh_8h_a753514b06b72da7f0dbfa254371ee79b}{n\+\_\+й\+\_\+элемент}}~nth\+\_\+element
+\item 
+\#define \mbox{\hyperlink{myh_8h_a06274494110dadefaa46f8d21490bef7}{cначать}}~cbegin
+\item 
+\#define \mbox{\hyperlink{myh_8h_afd06de28e1c13bb9a268a5bc634d1f0f}{cконец}}~cend
+\item 
+\#define \mbox{\hyperlink{myh_8h_a47aecebd11fbb89326367646a30a1ea1}{находить\+\_\+ли}}~find\+\_\+if
+\item 
+\#define \mbox{\hyperlink{myh_8h_ab7b21946352b2ff1ec8a7a66afda137f}{находить\+\_\+первый\+\_\+из}}~find\+\_\+first\+\_\+of
+\item 
+\#define \mbox{\hyperlink{myh_8h_a6435367aa30202625fce9ad4502672a5}{уникальный}}~unique
+\item 
+\#define \mbox{\hyperlink{myh_8h_aca125982fc7c6d66b49a0909da48e4f1}{отсортированный}}~is\+\_\+sorte
+\item 
+\#define \mbox{\hyperlink{myh_8h_adcb675406d4b71f6e5ce748e2302cd94}{поглощать}}~merge
+\item 
+\#define \mbox{\hyperlink{myh_8h_a487157897895840cf26247b8dfcc6289}{максимум}}~max
+\item 
+\#define \mbox{\hyperlink{myh_8h_a7dab48f2bd5d64f1c4d1c88897ec0752}{минимум}}~min
+\item 
+\#define \mbox{\hyperlink{myh_8h_a7b3ac64b80f177d89b3140d362a644b2}{для\+\_\+каждого}}~for\+\_\+each
+\item 
+\#define \mbox{\hyperlink{myh_8h_af800a6eb4edcdbb7ba83ccae424024e8}{считать}}~count
+\item 
+\#define \mbox{\hyperlink{myh_8h_a2e34304b13c08beead563fc48c38c9f9}{считать\+\_\+ли}}~count\+\_\+if
+\item 
+\#define \mbox{\hyperlink{myh_8h_a6a7064de5f31c6379e1ba231bdbe2fb5}{найти\+\_\+конец}}~find\+\_\+end
+\item 
+\#define \mbox{\hyperlink{myh_8h_a2a2969ad400c4d6c79b923a7c9e379f6}{минмакс}}~minmax
+\item 
+\#define \mbox{\hyperlink{myh_8h_a3cf54a052fde8b1a29d911a10b99ca11}{вектор}}~vector
+\item 
+\#define \mbox{\hyperlink{myh_8h_a30b04c997f32ffdbed4effc9e58fb2f9}{список}}~list
+\item 
+\#define \mbox{\hyperlink{myh_8h_a0e3046f7b462e4e73760d0c26638c00c}{деке}}~deque
+\item 
+\#define \mbox{\hyperlink{myh_8h_a7ffd923cbbd45266a7e0776bfb09a2cc}{стек}}~stack
+\item 
+\#define \mbox{\hyperlink{myh_8h_a9dcc834c2e652b32f4e195ea6820fa7f}{карта}}~map
+\item 
+\#define \mbox{\hyperlink{myh_8h_a8aeb529296e1ab19cb7119f1553a4aaf}{пара}}~pair
+\item 
+\#define \mbox{\hyperlink{myh_8h_a28cfd920a894df4471f0470391632493}{набор}}~set
+\item 
+\#define \mbox{\hyperlink{myh_8h_a8a6b35544b7779d5fc89f9aa380c112e}{прямой\+\_\+список}}~forward\+\_\+list
+\item 
+\#define \mbox{\hyperlink{myh_8h_a6c65a3ddfc99b0bd82ebf5c7a71ba8cc}{мультимножество}}~multiset
+\item 
+\#define \mbox{\hyperlink{myh_8h_a0275749e9d9fcf61d5df89182dfa654e}{мультимап}}~multimap
+\item 
+\#define \mbox{\hyperlink{myh_8h_ad6ef5e12d68c6ddc7d35e721687e0034}{неупорядоченный\+\_\+набор}}~unordered\+\_\+set
+\item 
+\#define \mbox{\hyperlink{myh_8h_ac5a028842d27d36344664970bee24411}{неупорядоченная\+\_\+карта}}~unordered\+\_\+map
+\item 
+\#define \mbox{\hyperlink{myh_8h_acf1d92fb6af68477cd486b6cf77585d0}{массив}}~array
+\item 
+\#define \mbox{\hyperlink{myh_8h_a829ac7eae8cd5576c75bc9a1c85289fc}{итератор}}~iterator
+\item 
+\#define \mbox{\hyperlink{myh_8h_af767340336d541f43912cae2bbde68eb}{царь\+\_\+батюшка\+\_\+главный}}~int main
+\item 
+\#define \mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}}~using
+\item 
+\#define \mbox{\hyperlink{myh_8h_ad49b174cb159db28f9d49e20780c3a81}{Русь}}~std
+\item 
+\#define \mbox{\hyperlink{myh_8h_a24ca3f462255073e17b3246c08893343}{молвить}}~cout
+\item 
+\#define \mbox{\hyperlink{myh_8h_acf70a90667dc9a19f3f11add4fb9785e}{внемлить}}~cin
+\item 
+\#define \mbox{\hyperlink{myh_8h_acc55363a897c2f112aec51342776d391}{воздать}}~return
+\item 
+\#define \mbox{\hyperlink{myh_8h_a6ae6587dc1142ae9e30dc0e02ad94021}{пахать}}~do
+\item 
+\#define \mbox{\hyperlink{myh_8h_a675f3871e7102465a328723671ba1a5d}{покуда}}~while
+\item 
+\#define \mbox{\hyperlink{myh_8h_ad189d5deb3d457bc413406ee0c4da732}{для}}~for
+\item 
+\#define \mbox{\hyperlink{myh_8h_ade6bad707a19f9b7f0c4b6f55f903d2f}{коли}}~if
+\item 
+\#define \mbox{\hyperlink{myh_8h_a5f425ac59931d04b73618f34f4815e1b}{отнюдь}}~else
+\item 
+\#define \mbox{\hyperlink{myh_8h_a050296df844f02a522bb0a453dcecd4a}{династия}}~class
+\item 
+\#define \mbox{\hyperlink{myh_8h_a73b6f8291b3c26d1133ec41d37a19d9a}{семейство}}~struct
+\item 
+\#define \mbox{\hyperlink{myh_8h_af0fcf5353fc9dc05ca5f6e9df19419ab}{перепись}}~enum
+\item 
+\#define \mbox{\hyperlink{myh_8h_a7e7bc282e577a863a7b1d1fb95ed025c}{бить\+\_\+ящеров}}~break
+\item 
+\#define \mbox{\hyperlink{myh_8h_a1c30939f331a91df5b19787fb525dc5c}{добить\+\_\+ящеров}}~continue
+\item 
+\#define \mbox{\hyperlink{myh_8h_a450fb7d9df41db301538710855e408d4}{путевой\+\_\+камень}}~switch
+\item 
+\#define \mbox{\hyperlink{myh_8h_aa2415130612292570eb2128fc242ed1b}{путь}}~case
+\item 
+\#define \mbox{\hyperlink{myh_8h_a2a63b748bbcd94ba93201013b1912df7}{базированно}}~default
+\item 
+\#define \mbox{\hyperlink{myh_8h_a6e1ab23dea3ca45b9ac0532716d43f31}{правда}}~true
+\item 
+\#define \mbox{\hyperlink{myh_8h_ade5e6e7fa91510a342c2e9e9a7cb00f2}{кривда}}~false
+\item 
+\#define \mbox{\hyperlink{myh_8h_acef7c4e97308a2b7b50d6eb0ae2f13c6}{прыг\+\_\+скок}}~endl
+\item 
+\#define \mbox{\hyperlink{myh_8h_a7e0fd3970483994b7d5dbb0f4453161b}{новь}}~new
+\item 
+\#define \mbox{\hyperlink{myh_8h_a4bb2a8f74cb8195c2a56054202b6524d}{казнь}}~delete
+\item 
+\#define \mbox{\hyperlink{myh_8h_ae0736509d9bb8ef1498fac4c7506b1ba}{туда\+\_\+не\+\_\+знаю\+\_\+куда}}~nullptr
+\item 
+\#define \mbox{\hyperlink{myh_8h_a7456b2d6ac8c8d496b4ba6f5076b9acc}{НИЧТО}}~NULL
+\item 
+\#define \mbox{\hyperlink{myh_8h_ad130a22d834b9c47d4869156db947cae}{судьба}}~random
+\item 
+\#define \mbox{\hyperlink{myh_8h_a5705d63c3dc0eec0c499eb871be4c7dd}{приказ\+\_\+княжий}}~const
+\item 
+\#define \mbox{\hyperlink{myh_8h_a635d6f26675e0e5679a0de336778610b}{мощь}}~pow
+\item 
+\#define \mbox{\hyperlink{myh_8h_af451ea8703ad14b8bc266d928316fefa}{получи\+\_\+басурман}}~throw
+\item 
+\#define \mbox{\hyperlink{myh_8h_a23e1d290f5d3d89761d4b1a66f9d92f7}{гнев\+\_\+Перуна}}~exception
+\item 
+\#define \mbox{\hyperlink{myh_8h_a2736d1adec6b0e6572a9aa04934004ec}{читать\+\_\+летопись}}~ifstream
+\item 
+\#define \mbox{\hyperlink{myh_8h_a27603ed4b091a519fe4acf35a02162c7}{писать\+\_\+летопись}}~ofstream
+\item 
+\#define \mbox{\hyperlink{myh_8h_a3ec4dac01636048107b4046a00189079}{летопись}}~fstream
+\item 
+\#define \mbox{\hyperlink{myh_8h_a26cdbc5c11f4b3e7c0efbcb596a4d98b}{друже}}~friend
+\item 
+\#define \mbox{\hyperlink{myh_8h_a4870965f4330c0d750f29ed090bfe1f5}{окстись}}~goto
+\item 
+\#define \mbox{\hyperlink{myh_8h_a44aab7765ddf23146d21788a19819873}{свет\+\_\+мой\+\_\+зеркальце}}~template
+\item 
+\#define \mbox{\hyperlink{myh_8h_a8293733d24c1da8592d7759c72980292}{скажи}}~typename
+\item 
+\#define \mbox{\hyperlink{myh_8h_a91ee4c18af4b1beb9efeb7b77d31f2df}{царский}}~private
+\item 
+\#define \mbox{\hyperlink{myh_8h_afb4a147371cb888c8a3bb6ccd7f720a1}{народный}}~public
+\item 
+\#define \mbox{\hyperlink{myh_8h_a97518bf59ecd16ead4d61c9e744e7e8c}{дружинный}}~protected
+\item 
+\#define \mbox{\hyperlink{myh_8h_a7737705fb9db6bb8ee789b7e83e558da}{встрой}}~inline
+\item 
+\#define \mbox{\hyperlink{myh_8h_a78e08e29eb47ca97c8fd747af0e89bee}{кощей}}~static
+\item 
+\#define \mbox{\hyperlink{myh_8h_a19b5bde1bd25fd5496fb36deefff56f1}{однобокий}}~unsigned
+\item 
+\#define \mbox{\hyperlink{myh_8h_a86d22ee3e3537c0bddb9566c0031bd98}{пытать\+\_\+ящера}}~try
+\item 
+\#define \mbox{\hyperlink{myh_8h_a0a810ed899c058eaa06eba5a2445eba4}{поймать\+\_\+ящера}}~catch
+\item 
+\#define \mbox{\hyperlink{myh_8h_a96820d86faf7f4ef119636d268c6f222}{хутор}}~namespace
+\item 
+\#define \mbox{\hyperlink{myh_8h_ab8d545574f12722e645c10fab2b67bfa}{откупорить}}~open
+\item 
+\#define \mbox{\hyperlink{myh_8h_a3010b90679a6d9411af7352a26bebb24}{закупорить}}~close
+\item 
+\#define \mbox{\hyperlink{myh_8h_a19336bf93b56a48854913a2ac0e41b2a}{суд\+\_\+Перуна}}~auto
+\item 
+\#define \mbox{\hyperlink{myh_8h_a28fce16b9f2c9bb144367d9e7ab46af8}{аки}}~static\+\_\+cast
+\item 
+\#define \mbox{\hyperlink{myh_8h_aeeaff94303ca4382e30f164b66428faa}{очами\+\_\+стрельнуть}}~peek
+\item 
+\#define \mbox{\hyperlink{myh_8h_a4e2ba7c27285dcc760f64c0e1f8a6c63}{зачерпнуть}}~getline
+\item 
+\#define \mbox{\hyperlink{myh_8h_af56754ad13372882ae2ccffae9c73eaf}{добрый\+\_\+молодец}}~good
+\item 
+\#define \mbox{\hyperlink{myh_8h_a143f07b5ea548f6fe3c6a423e118b725}{змей\+\_\+подколодный}}~fail
+\item 
+\#define \mbox{\hyperlink{myh_8h_a2d9995645a411d3a61ba75a502fa3bf1}{вот\+\_\+и\+\_\+сказочке\+\_\+конец}}~eof
+\item 
+\#define \mbox{\hyperlink{myh_8h_aae44fac75ad2e775fcc97f978e7d301d}{вск}}~eof
+\item 
+\#define \mbox{\hyperlink{myh_8h_a4fa162885539f03ce138d7ca7df19757}{приток\+\_\+Байкала}}~ostream
+\item 
+\#define \mbox{\hyperlink{myh_8h_af95753ab50b3a870ed7e79b2a4bda2f7}{отток\+\_\+Байкала}}~istream
+\item 
+\#define \mbox{\hyperlink{myh_8h_a6ae6d9224758ef556df972b58dfd21bd}{меняло}}~std\+::swap
+\item 
+\#define \mbox{\hyperlink{myh_8h_abb1e8a694dbe69d50d2822695440abd7}{отщипнуть}}~get
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{myh_8h_ae072712c87b5379f2212d447043a2224}{целина}} = int
+\item 
+\mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{myh_8h_ad42e5840459b38a8b3b6fbd64b0a2307}{вель\+\_\+дробь}} = double
+\item 
+\mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{myh_8h_a350debe9ae7e0d0877ea17752671e05b}{малый\+\_\+дробь}} = float
+\item 
+\mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{myh_8h_a630684ccb37329b5a263c3474871c441}{буква}} = char
+\item 
+\mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{myh_8h_adc844cac58a054924f6d00c487366950}{много\+\_\+букав}} = Русь\+::string
+\item 
+\mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{myh_8h_a4bbe312df5088b5033c96c1cca332833}{бестолочь}} = void
+\item 
+\mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{myh_8h_a5e1e499dacc8778e2f244b3659b71c5b}{карлик}} = short
+\item 
+\mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{myh_8h_af2f77bc17f79717e842bffea351eb14a}{долговязый}} = long
+\item 
+\mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{myh_8h_a1725c8de9cdaf3418842d3e0e80cc7af}{Петр\+\_\+Первый}} = long long
+\item 
+\mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{myh_8h_a91daf410472b954e16e8aa9a5f4a41e6}{мерило}} = size\+\_\+t
+\item 
+\mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} \mbox{\hyperlink{myh_8h_a21ba60646a3de62646c07588c5a1e777}{розсуд}} = bool
+\item 
+\mbox{\hyperlink{myh_8h_af0fcf5353fc9dc05ca5f6e9df19419ab}{перепись}} \mbox{\hyperlink{myh_8h_a27fb562d01dfa5dada5532eef71420c3}{счёт\+\_\+древних\+\_\+русов}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{myh_8h_a7456b2d6ac8c8d496b4ba6f5076b9acc}\label{myh_8h_a7456b2d6ac8c8d496b4ba6f5076b9acc} 
+\index{myh.h@{myh.h}!НИЧТО@{НИЧТО}}
+\index{НИЧТО@{НИЧТО}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{НИЧТО}{НИЧТО}}
+{\footnotesize\ttfamily \#define НИЧТО~NULL}
+
+\Hypertarget{myh_8h_ad49b174cb159db28f9d49e20780c3a81}\label{myh_8h_ad49b174cb159db28f9d49e20780c3a81} 
+\index{myh.h@{myh.h}!Русь@{Русь}}
+\index{Русь@{Русь}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{Русь}{Русь}}
+{\footnotesize\ttfamily \#define Русь~std}
+
+\Hypertarget{myh_8h_a28fce16b9f2c9bb144367d9e7ab46af8}\label{myh_8h_a28fce16b9f2c9bb144367d9e7ab46af8} 
+\index{myh.h@{myh.h}!аки@{аки}}
+\index{аки@{аки}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{аки}{аки}}
+{\footnotesize\ttfamily \#define аки~static\+\_\+cast}
+
+\Hypertarget{myh_8h_a2a63b748bbcd94ba93201013b1912df7}\label{myh_8h_a2a63b748bbcd94ba93201013b1912df7} 
+\index{myh.h@{myh.h}!базированно@{базированно}}
+\index{базированно@{базированно}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{базированно}{базированно}}
+{\footnotesize\ttfamily \#define базированно~default}
+
+\Hypertarget{myh_8h_a7fc23710fdbf45f0d2514bb85453dc59}\label{myh_8h_a7fc23710fdbf45f0d2514bb85453dc59} 
+\index{myh.h@{myh.h}!бинарный\_поиск@{бинарный\_поиск}}
+\index{бинарный\_поиск@{бинарный\_поиск}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{бинарный\_поиск}{бинарный\_поиск}}
+{\footnotesize\ttfamily \#define бинарный\+\_\+поиск~binary\+\_\+search}
+
+\Hypertarget{myh_8h_a7e7bc282e577a863a7b1d1fb95ed025c}\label{myh_8h_a7e7bc282e577a863a7b1d1fb95ed025c} 
+\index{myh.h@{myh.h}!бить\_ящеров@{бить\_ящеров}}
+\index{бить\_ящеров@{бить\_ящеров}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{бить\_ящеров}{бить\_ящеров}}
+{\footnotesize\ttfamily \#define бить\+\_\+ящеров~break}
+
+\Hypertarget{myh_8h_a3cf54a052fde8b1a29d911a10b99ca11}\label{myh_8h_a3cf54a052fde8b1a29d911a10b99ca11} 
+\index{myh.h@{myh.h}!вектор@{вектор}}
+\index{вектор@{вектор}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{вектор}{вектор}}
+{\footnotesize\ttfamily \#define вектор~vector}
+
+\Hypertarget{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}\label{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1} 
+\index{myh.h@{myh.h}!внедрить@{внедрить}}
+\index{внедрить@{внедрить}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{внедрить}{внедрить}}
+{\footnotesize\ttfamily \#define внедрить~using}
+
+\Hypertarget{myh_8h_acf70a90667dc9a19f3f11add4fb9785e}\label{myh_8h_acf70a90667dc9a19f3f11add4fb9785e} 
+\index{myh.h@{myh.h}!внемлить@{внемлить}}
+\index{внемлить@{внемлить}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{внемлить}{внемлить}}
+{\footnotesize\ttfamily \#define внемлить~cin}
+
+\Hypertarget{myh_8h_acc55363a897c2f112aec51342776d391}\label{myh_8h_acc55363a897c2f112aec51342776d391} 
+\index{myh.h@{myh.h}!воздать@{воздать}}
+\index{воздать@{воздать}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{воздать}{воздать}}
+{\footnotesize\ttfamily \#define воздать~return}
+
+\Hypertarget{myh_8h_a2d9995645a411d3a61ba75a502fa3bf1}\label{myh_8h_a2d9995645a411d3a61ba75a502fa3bf1} 
+\index{myh.h@{myh.h}!вот\_и\_сказочке\_конец@{вот\_и\_сказочке\_конец}}
+\index{вот\_и\_сказочке\_конец@{вот\_и\_сказочке\_конец}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{вот\_и\_сказочке\_конец}{вот\_и\_сказочке\_конец}}
+{\footnotesize\ttfamily \#define вот\+\_\+и\+\_\+сказочке\+\_\+конец~eof}
+
+\Hypertarget{myh_8h_aae44fac75ad2e775fcc97f978e7d301d}\label{myh_8h_aae44fac75ad2e775fcc97f978e7d301d} 
+\index{myh.h@{myh.h}!вск@{вск}}
+\index{вск@{вск}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{вск}{вск}}
+{\footnotesize\ttfamily \#define вск~eof}
+
+\Hypertarget{myh_8h_a7737705fb9db6bb8ee789b7e83e558da}\label{myh_8h_a7737705fb9db6bb8ee789b7e83e558da} 
+\index{myh.h@{myh.h}!встрой@{встрой}}
+\index{встрой@{встрой}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{встрой}{встрой}}
+{\footnotesize\ttfamily \#define встрой~inline}
+
+\Hypertarget{myh_8h_afd74230e1be6bb25bb440b2be1242a27}\label{myh_8h_afd74230e1be6bb25bb440b2be1242a27} 
+\index{myh.h@{myh.h}!генерировать@{генерировать}}
+\index{генерировать@{генерировать}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{генерировать}{генерировать}}
+{\footnotesize\ttfamily \#define генерировать~generate}
+
+\Hypertarget{myh_8h_a23e1d290f5d3d89761d4b1a66f9d92f7}\label{myh_8h_a23e1d290f5d3d89761d4b1a66f9d92f7} 
+\index{myh.h@{myh.h}!гнев\_Перуна@{гнев\_Перуна}}
+\index{гнев\_Перуна@{гнев\_Перуна}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{гнев\_Перуна}{гнев\_Перуна}}
+{\footnotesize\ttfamily \#define гнев\+\_\+Перуна~exception}
+
+\Hypertarget{myh_8h_ac9fb090ada6343ff88cab9171161b78e}\label{myh_8h_ac9fb090ada6343ff88cab9171161b78e} 
+\index{myh.h@{myh.h}!двигаться@{двигаться}}
+\index{двигаться@{двигаться}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{двигаться}{двигаться}}
+{\footnotesize\ttfamily \#define двигаться~move}
+
+\Hypertarget{myh_8h_a0e3046f7b462e4e73760d0c26638c00c}\label{myh_8h_a0e3046f7b462e4e73760d0c26638c00c} 
+\index{myh.h@{myh.h}!деке@{деке}}
+\index{деке@{деке}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{деке}{деке}}
+{\footnotesize\ttfamily \#define деке~deque}
+
+\Hypertarget{myh_8h_a050296df844f02a522bb0a453dcecd4a}\label{myh_8h_a050296df844f02a522bb0a453dcecd4a} 
+\index{myh.h@{myh.h}!династия@{династия}}
+\index{династия@{династия}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{династия}{династия}}
+{\footnotesize\ttfamily \#define династия~class}
+
+\Hypertarget{myh_8h_ad189d5deb3d457bc413406ee0c4da732}\label{myh_8h_ad189d5deb3d457bc413406ee0c4da732} 
+\index{myh.h@{myh.h}!для@{для}}
+\index{для@{для}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{для}{для}}
+{\footnotesize\ttfamily \#define для~for}
+
+\Hypertarget{myh_8h_a7b3ac64b80f177d89b3140d362a644b2}\label{myh_8h_a7b3ac64b80f177d89b3140d362a644b2} 
+\index{myh.h@{myh.h}!для\_каждого@{для\_каждого}}
+\index{для\_каждого@{для\_каждого}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{для\_каждого}{для\_каждого}}
+{\footnotesize\ttfamily \#define для\+\_\+каждого~for\+\_\+each}
+
+\Hypertarget{myh_8h_a1c30939f331a91df5b19787fb525dc5c}\label{myh_8h_a1c30939f331a91df5b19787fb525dc5c} 
+\index{myh.h@{myh.h}!добить\_ящеров@{добить\_ящеров}}
+\index{добить\_ящеров@{добить\_ящеров}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{добить\_ящеров}{добить\_ящеров}}
+{\footnotesize\ttfamily \#define добить\+\_\+ящеров~continue}
+
+\Hypertarget{myh_8h_af56754ad13372882ae2ccffae9c73eaf}\label{myh_8h_af56754ad13372882ae2ccffae9c73eaf} 
+\index{myh.h@{myh.h}!добрый\_молодец@{добрый\_молодец}}
+\index{добрый\_молодец@{добрый\_молодец}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{добрый\_молодец}{добрый\_молодец}}
+{\footnotesize\ttfamily \#define добрый\+\_\+молодец~good}
+
+\Hypertarget{myh_8h_a26cdbc5c11f4b3e7c0efbcb596a4d98b}\label{myh_8h_a26cdbc5c11f4b3e7c0efbcb596a4d98b} 
+\index{myh.h@{myh.h}!друже@{друже}}
+\index{друже@{друже}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{друже}{друже}}
+{\footnotesize\ttfamily \#define друже~friend}
+
+\Hypertarget{myh_8h_a97518bf59ecd16ead4d61c9e744e7e8c}\label{myh_8h_a97518bf59ecd16ead4d61c9e744e7e8c} 
+\index{myh.h@{myh.h}!дружинный@{дружинный}}
+\index{дружинный@{дружинный}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{дружинный}{дружинный}}
+{\footnotesize\ttfamily \#define дружинный~protected}
+
+\Hypertarget{myh_8h_a3010b90679a6d9411af7352a26bebb24}\label{myh_8h_a3010b90679a6d9411af7352a26bebb24} 
+\index{myh.h@{myh.h}!закупорить@{закупорить}}
+\index{закупорить@{закупорить}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{закупорить}{закупорить}}
+{\footnotesize\ttfamily \#define закупорить~close}
+
+\Hypertarget{myh_8h_ab7a621b5c2439261dff5220742fdc00c}\label{myh_8h_ab7a621b5c2439261dff5220742fdc00c} 
+\index{myh.h@{myh.h}!заменять@{заменять}}
+\index{заменять@{заменять}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{заменять}{заменять}}
+{\footnotesize\ttfamily \#define заменять~replace}
+
+\Hypertarget{myh_8h_a4477867c12f6222a576fcd1ba34ff689}\label{myh_8h_a4477867c12f6222a576fcd1ba34ff689} 
+\index{myh.h@{myh.h}!заменять\_ли@{заменять\_ли}}
+\index{заменять\_ли@{заменять\_ли}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{заменять\_ли}{заменять\_ли}}
+{\footnotesize\ttfamily \#define заменять\+\_\+ли~replace\+\_\+if}
+
+\Hypertarget{myh_8h_a4e2ba7c27285dcc760f64c0e1f8a6c63}\label{myh_8h_a4e2ba7c27285dcc760f64c0e1f8a6c63} 
+\index{myh.h@{myh.h}!зачерпнуть@{зачерпнуть}}
+\index{зачерпнуть@{зачерпнуть}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{зачерпнуть}{зачерпнуть}}
+{\footnotesize\ttfamily \#define зачерпнуть~getline}
+
+\Hypertarget{myh_8h_a143f07b5ea548f6fe3c6a423e118b725}\label{myh_8h_a143f07b5ea548f6fe3c6a423e118b725} 
+\index{myh.h@{myh.h}!змей\_подколодный@{змей\_подколодный}}
+\index{змей\_подколодный@{змей\_подколодный}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{змей\_подколодный}{змей\_подколодный}}
+{\footnotesize\ttfamily \#define змей\+\_\+подколодный~fail}
+
+\Hypertarget{myh_8h_a829ac7eae8cd5576c75bc9a1c85289fc}\label{myh_8h_a829ac7eae8cd5576c75bc9a1c85289fc} 
+\index{myh.h@{myh.h}!итератор@{итератор}}
+\index{итератор@{итератор}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{итератор}{итератор}}
+{\footnotesize\ttfamily \#define итератор~iterator}
+
+\Hypertarget{myh_8h_a4bb2a8f74cb8195c2a56054202b6524d}\label{myh_8h_a4bb2a8f74cb8195c2a56054202b6524d} 
+\index{myh.h@{myh.h}!казнь@{казнь}}
+\index{казнь@{казнь}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{казнь}{казнь}}
+{\footnotesize\ttfamily \#define казнь~delete}
+
+\Hypertarget{myh_8h_a9dcc834c2e652b32f4e195ea6820fa7f}\label{myh_8h_a9dcc834c2e652b32f4e195ea6820fa7f} 
+\index{myh.h@{myh.h}!карта@{карта}}
+\index{карта@{карта}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{карта}{карта}}
+{\footnotesize\ttfamily \#define карта~map}
+
+\Hypertarget{myh_8h_ade6bad707a19f9b7f0c4b6f55f903d2f}\label{myh_8h_ade6bad707a19f9b7f0c4b6f55f903d2f} 
+\index{myh.h@{myh.h}!коли@{коли}}
+\index{коли@{коли}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{коли}{коли}}
+{\footnotesize\ttfamily \#define коли~if}
+
+\Hypertarget{myh_8h_a8ca99f47d7414be646038a924afb86db}\label{myh_8h_a8ca99f47d7414be646038a924afb86db} 
+\index{myh.h@{myh.h}!конец@{конец}}
+\index{конец@{конец}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{конец}{конец}}
+{\footnotesize\ttfamily \#define конец~end}
+
+\Hypertarget{myh_8h_ab1af06d5e66529a2ceffdeb5dc74c27e}\label{myh_8h_ab1af06d5e66529a2ceffdeb5dc74c27e} 
+\index{myh.h@{myh.h}!копировать@{копировать}}
+\index{копировать@{копировать}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{копировать}{копировать}}
+{\footnotesize\ttfamily \#define копировать~copy}
+
+\Hypertarget{myh_8h_a6daf9a4492c8d6b1d24d29150338f491}\label{myh_8h_a6daf9a4492c8d6b1d24d29150338f491} 
+\index{myh.h@{myh.h}!копировать\_ли@{копировать\_ли}}
+\index{копировать\_ли@{копировать\_ли}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{копировать\_ли}{копировать\_ли}}
+{\footnotesize\ttfamily \#define копировать\+\_\+ли~copy\+\_\+if}
+
+\Hypertarget{myh_8h_a78e08e29eb47ca97c8fd747af0e89bee}\label{myh_8h_a78e08e29eb47ca97c8fd747af0e89bee} 
+\index{myh.h@{myh.h}!кощей@{кощей}}
+\index{кощей@{кощей}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{кощей}{кощей}}
+{\footnotesize\ttfamily \#define кощей~static}
+
+\Hypertarget{myh_8h_ade5e6e7fa91510a342c2e9e9a7cb00f2}\label{myh_8h_ade5e6e7fa91510a342c2e9e9a7cb00f2} 
+\index{myh.h@{myh.h}!кривда@{кривда}}
+\index{кривда@{кривда}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{кривда}{кривда}}
+{\footnotesize\ttfamily \#define кривда~false}
+
+\Hypertarget{myh_8h_a3ec4dac01636048107b4046a00189079}\label{myh_8h_a3ec4dac01636048107b4046a00189079} 
+\index{myh.h@{myh.h}!летопись@{летопись}}
+\index{летопись@{летопись}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{летопись}{летопись}}
+{\footnotesize\ttfamily \#define летопись~fstream}
+
+\Hypertarget{myh_8h_a487157897895840cf26247b8dfcc6289}\label{myh_8h_a487157897895840cf26247b8dfcc6289} 
+\index{myh.h@{myh.h}!максимум@{максимум}}
+\index{максимум@{максимум}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{максимум}{максимум}}
+{\footnotesize\ttfamily \#define максимум~max}
+
+\Hypertarget{myh_8h_acf1d92fb6af68477cd486b6cf77585d0}\label{myh_8h_acf1d92fb6af68477cd486b6cf77585d0} 
+\index{myh.h@{myh.h}!массив@{массив}}
+\index{массив@{массив}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{массив}{массив}}
+{\footnotesize\ttfamily \#define массив~array}
+
+\Hypertarget{myh_8h_a6ae6d9224758ef556df972b58dfd21bd}\label{myh_8h_a6ae6d9224758ef556df972b58dfd21bd} 
+\index{myh.h@{myh.h}!меняло@{меняло}}
+\index{меняло@{меняло}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{меняло}{меняло}}
+{\footnotesize\ttfamily \#define меняло~std\+::swap}
+
+\Hypertarget{myh_8h_ab2b35d43413b02092d3466f742d4ae25}\label{myh_8h_ab2b35d43413b02092d3466f742d4ae25} 
+\index{myh.h@{myh.h}!менять@{менять}}
+\index{менять@{менять}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{менять}{менять}}
+{\footnotesize\ttfamily \#define менять~swap}
+
+\Hypertarget{myh_8h_a70049df80a6016acafe05aefc51f63c1}\label{myh_8h_a70049df80a6016acafe05aefc51f63c1} 
+\index{myh.h@{myh.h}!менять\_ли@{менять\_ли}}
+\index{менять\_ли@{менять\_ли}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{менять\_ли}{менять\_ли}}
+{\footnotesize\ttfamily \#define менять\+\_\+ли~swap\+\_\+if}
+
+\Hypertarget{myh_8h_a7dab48f2bd5d64f1c4d1c88897ec0752}\label{myh_8h_a7dab48f2bd5d64f1c4d1c88897ec0752} 
+\index{myh.h@{myh.h}!минимум@{минимум}}
+\index{минимум@{минимум}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{минимум}{минимум}}
+{\footnotesize\ttfamily \#define минимум~min}
+
+\Hypertarget{myh_8h_a2a2969ad400c4d6c79b923a7c9e379f6}\label{myh_8h_a2a2969ad400c4d6c79b923a7c9e379f6} 
+\index{myh.h@{myh.h}!минмакс@{минмакс}}
+\index{минмакс@{минмакс}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{минмакс}{минмакс}}
+{\footnotesize\ttfamily \#define минмакс~minmax}
+
+\Hypertarget{myh_8h_a24ca3f462255073e17b3246c08893343}\label{myh_8h_a24ca3f462255073e17b3246c08893343} 
+\index{myh.h@{myh.h}!молвить@{молвить}}
+\index{молвить@{молвить}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{молвить}{молвить}}
+{\footnotesize\ttfamily \#define молвить~cout}
+
+\Hypertarget{myh_8h_a635d6f26675e0e5679a0de336778610b}\label{myh_8h_a635d6f26675e0e5679a0de336778610b} 
+\index{myh.h@{myh.h}!мощь@{мощь}}
+\index{мощь@{мощь}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{мощь}{мощь}}
+{\footnotesize\ttfamily \#define мощь~pow}
+
+\Hypertarget{myh_8h_a0275749e9d9fcf61d5df89182dfa654e}\label{myh_8h_a0275749e9d9fcf61d5df89182dfa654e} 
+\index{myh.h@{myh.h}!мультимап@{мультимап}}
+\index{мультимап@{мультимап}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{мультимап}{мультимап}}
+{\footnotesize\ttfamily \#define мультимап~multimap}
+
+\Hypertarget{myh_8h_a6c65a3ddfc99b0bd82ebf5c7a71ba8cc}\label{myh_8h_a6c65a3ddfc99b0bd82ebf5c7a71ba8cc} 
+\index{myh.h@{myh.h}!мультимножество@{мультимножество}}
+\index{мультимножество@{мультимножество}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{мультимножество}{мультимножество}}
+{\footnotesize\ttfamily \#define мультимножество~multiset}
+
+\Hypertarget{myh_8h_a28cfd920a894df4471f0470391632493}\label{myh_8h_a28cfd920a894df4471f0470391632493} 
+\index{myh.h@{myh.h}!набор@{набор}}
+\index{набор@{набор}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{набор}{набор}}
+{\footnotesize\ttfamily \#define набор~set}
+
+\Hypertarget{myh_8h_a6a7064de5f31c6379e1ba231bdbe2fb5}\label{myh_8h_a6a7064de5f31c6379e1ba231bdbe2fb5} 
+\index{myh.h@{myh.h}!найти\_конец@{найти\_конец}}
+\index{найти\_конец@{найти\_конец}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{найти\_конец}{найти\_конец}}
+{\footnotesize\ttfamily \#define найти\+\_\+конец~find\+\_\+end}
+
+\Hypertarget{myh_8h_afb4a147371cb888c8a3bb6ccd7f720a1}\label{myh_8h_afb4a147371cb888c8a3bb6ccd7f720a1} 
+\index{myh.h@{myh.h}!народный@{народный}}
+\index{народный@{народный}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{народный}{народный}}
+{\footnotesize\ttfamily \#define народный~public}
+
+\Hypertarget{myh_8h_ac0c29017b004c59dee56de45ee17820a}\label{myh_8h_ac0c29017b004c59dee56de45ee17820a} 
+\index{myh.h@{myh.h}!находить@{находить}}
+\index{находить@{находить}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{находить}{находить}}
+{\footnotesize\ttfamily \#define находить~find}
+
+\Hypertarget{myh_8h_a47aecebd11fbb89326367646a30a1ea1}\label{myh_8h_a47aecebd11fbb89326367646a30a1ea1} 
+\index{myh.h@{myh.h}!находить\_ли@{находить\_ли}}
+\index{находить\_ли@{находить\_ли}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{находить\_ли}{находить\_ли}}
+{\footnotesize\ttfamily \#define находить\+\_\+ли~find\+\_\+if}
+
+\Hypertarget{myh_8h_ab7b21946352b2ff1ec8a7a66afda137f}\label{myh_8h_ab7b21946352b2ff1ec8a7a66afda137f} 
+\index{myh.h@{myh.h}!находить\_первый\_из@{находить\_первый\_из}}
+\index{находить\_первый\_из@{находить\_первый\_из}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{находить\_первый\_из}{находить\_первый\_из}}
+{\footnotesize\ttfamily \#define находить\+\_\+первый\+\_\+из~find\+\_\+first\+\_\+of}
+
+\Hypertarget{myh_8h_a9609eee61682cd41da46b039e0bc72ac}\label{myh_8h_a9609eee61682cd41da46b039e0bc72ac} 
+\index{myh.h@{myh.h}!начать@{начать}}
+\index{начать@{начать}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{начать}{начать}}
+{\footnotesize\ttfamily \#define начать~begin}
+
+\Hypertarget{myh_8h_ac5a028842d27d36344664970bee24411}\label{myh_8h_ac5a028842d27d36344664970bee24411} 
+\index{myh.h@{myh.h}!неупорядоченная\_карта@{неупорядоченная\_карта}}
+\index{неупорядоченная\_карта@{неупорядоченная\_карта}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{неупорядоченная\_карта}{неупорядоченная\_карта}}
+{\footnotesize\ttfamily \#define неупорядоченная\+\_\+карта~unordered\+\_\+map}
+
+\Hypertarget{myh_8h_ad6ef5e12d68c6ddc7d35e721687e0034}\label{myh_8h_ad6ef5e12d68c6ddc7d35e721687e0034} 
+\index{myh.h@{myh.h}!неупорядоченный\_набор@{неупорядоченный\_набор}}
+\index{неупорядоченный\_набор@{неупорядоченный\_набор}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{неупорядоченный\_набор}{неупорядоченный\_набор}}
+{\footnotesize\ttfamily \#define неупорядоченный\+\_\+набор~unordered\+\_\+set}
+
+\Hypertarget{myh_8h_a7e0fd3970483994b7d5dbb0f4453161b}\label{myh_8h_a7e0fd3970483994b7d5dbb0f4453161b} 
+\index{myh.h@{myh.h}!новь@{новь}}
+\index{новь@{новь}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{новь}{новь}}
+{\footnotesize\ttfamily \#define новь~new}
+
+\Hypertarget{myh_8h_aa4db11a15b78cb64ca04f11f2f011c42}\label{myh_8h_aa4db11a15b78cb64ca04f11f2f011c42} 
+\index{myh.h@{myh.h}!обратная\_копия@{обратная\_копия}}
+\index{обратная\_копия@{обратная\_копия}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{обратная\_копия}{обратная\_копия}}
+{\footnotesize\ttfamily \#define обратная\+\_\+копия~reverse\+\_\+copy}
+
+\Hypertarget{myh_8h_a3be94c24267e7315e6575440a395daa9}\label{myh_8h_a3be94c24267e7315e6575440a395daa9} 
+\index{myh.h@{myh.h}!обратный@{обратный}}
+\index{обратный@{обратный}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{обратный}{обратный}}
+{\footnotesize\ttfamily \#define обратный~reverse}
+
+\Hypertarget{myh_8h_a19b5bde1bd25fd5496fb36deefff56f1}\label{myh_8h_a19b5bde1bd25fd5496fb36deefff56f1} 
+\index{myh.h@{myh.h}!однобокий@{однобокий}}
+\index{однобокий@{однобокий}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{однобокий}{однобокий}}
+{\footnotesize\ttfamily \#define однобокий~unsigned}
+
+\Hypertarget{myh_8h_a4870965f4330c0d750f29ed090bfe1f5}\label{myh_8h_a4870965f4330c0d750f29ed090bfe1f5} 
+\index{myh.h@{myh.h}!окстись@{окстись}}
+\index{окстись@{окстись}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{окстись}{окстись}}
+{\footnotesize\ttfamily \#define окстись~goto}
+
+\Hypertarget{myh_8h_ab8d545574f12722e645c10fab2b67bfa}\label{myh_8h_ab8d545574f12722e645c10fab2b67bfa} 
+\index{myh.h@{myh.h}!откупорить@{откупорить}}
+\index{откупорить@{откупорить}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{откупорить}{откупорить}}
+{\footnotesize\ttfamily \#define откупорить~open}
+
+\Hypertarget{myh_8h_a5f425ac59931d04b73618f34f4815e1b}\label{myh_8h_a5f425ac59931d04b73618f34f4815e1b} 
+\index{myh.h@{myh.h}!отнюдь@{отнюдь}}
+\index{отнюдь@{отнюдь}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{отнюдь}{отнюдь}}
+{\footnotesize\ttfamily \#define отнюдь~else}
+
+\Hypertarget{myh_8h_aca125982fc7c6d66b49a0909da48e4f1}\label{myh_8h_aca125982fc7c6d66b49a0909da48e4f1} 
+\index{myh.h@{myh.h}!отсортированный@{отсортированный}}
+\index{отсортированный@{отсортированный}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{отсортированный}{отсортированный}}
+{\footnotesize\ttfamily \#define отсортированный~is\+\_\+sorte}
+
+\Hypertarget{myh_8h_af95753ab50b3a870ed7e79b2a4bda2f7}\label{myh_8h_af95753ab50b3a870ed7e79b2a4bda2f7} 
+\index{myh.h@{myh.h}!отток\_Байкала@{отток\_Байкала}}
+\index{отток\_Байкала@{отток\_Байкала}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{отток\_Байкала}{отток\_Байкала}}
+{\footnotesize\ttfamily \#define отток\+\_\+Байкала~istream}
+
+\Hypertarget{myh_8h_abb1e8a694dbe69d50d2822695440abd7}\label{myh_8h_abb1e8a694dbe69d50d2822695440abd7} 
+\index{myh.h@{myh.h}!отщипнуть@{отщипнуть}}
+\index{отщипнуть@{отщипнуть}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{отщипнуть}{отщипнуть}}
+{\footnotesize\ttfamily \#define отщипнуть~get}
+
+\Hypertarget{myh_8h_aeeaff94303ca4382e30f164b66428faa}\label{myh_8h_aeeaff94303ca4382e30f164b66428faa} 
+\index{myh.h@{myh.h}!очами\_стрельнуть@{очами\_стрельнуть}}
+\index{очами\_стрельнуть@{очами\_стрельнуть}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{очами\_стрельнуть}{очами\_стрельнуть}}
+{\footnotesize\ttfamily \#define очами\+\_\+стрельнуть~peek}
+
+\Hypertarget{myh_8h_a8aeb529296e1ab19cb7119f1553a4aaf}\label{myh_8h_a8aeb529296e1ab19cb7119f1553a4aaf} 
+\index{myh.h@{myh.h}!пара@{пара}}
+\index{пара@{пара}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{пара}{пара}}
+{\footnotesize\ttfamily \#define пара~pair}
+
+\Hypertarget{myh_8h_a6ae6587dc1142ae9e30dc0e02ad94021}\label{myh_8h_a6ae6587dc1142ae9e30dc0e02ad94021} 
+\index{myh.h@{myh.h}!пахать@{пахать}}
+\index{пахать@{пахать}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{пахать}{пахать}}
+{\footnotesize\ttfamily \#define пахать~do}
+
+\Hypertarget{myh_8h_af0fcf5353fc9dc05ca5f6e9df19419ab}\label{myh_8h_af0fcf5353fc9dc05ca5f6e9df19419ab} 
+\index{myh.h@{myh.h}!перепись@{перепись}}
+\index{перепись@{перепись}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{перепись}{перепись}}
+{\footnotesize\ttfamily \#define перепись~enum}
+
+\Hypertarget{myh_8h_a27603ed4b091a519fe4acf35a02162c7}\label{myh_8h_a27603ed4b091a519fe4acf35a02162c7} 
+\index{myh.h@{myh.h}!писать\_летопись@{писать\_летопись}}
+\index{писать\_летопись@{писать\_летопись}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{писать\_летопись}{писать\_летопись}}
+{\footnotesize\ttfamily \#define писать\+\_\+летопись~ofstream}
+
+\Hypertarget{myh_8h_adcb675406d4b71f6e5ce748e2302cd94}\label{myh_8h_adcb675406d4b71f6e5ce748e2302cd94} 
+\index{myh.h@{myh.h}!поглощать@{поглощать}}
+\index{поглощать@{поглощать}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{поглощать}{поглощать}}
+{\footnotesize\ttfamily \#define поглощать~merge}
+
+\Hypertarget{myh_8h_a0a810ed899c058eaa06eba5a2445eba4}\label{myh_8h_a0a810ed899c058eaa06eba5a2445eba4} 
+\index{myh.h@{myh.h}!поймать\_ящера@{поймать\_ящера}}
+\index{поймать\_ящера@{поймать\_ящера}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{поймать\_ящера}{поймать\_ящера}}
+{\footnotesize\ttfamily \#define поймать\+\_\+ящера~catch}
+
+\Hypertarget{myh_8h_a675f3871e7102465a328723671ba1a5d}\label{myh_8h_a675f3871e7102465a328723671ba1a5d} 
+\index{myh.h@{myh.h}!покуда@{покуда}}
+\index{покуда@{покуда}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{покуда}{покуда}}
+{\footnotesize\ttfamily \#define покуда~while}
+
+\Hypertarget{myh_8h_af451ea8703ad14b8bc266d928316fefa}\label{myh_8h_af451ea8703ad14b8bc266d928316fefa} 
+\index{myh.h@{myh.h}!получи\_басурман@{получи\_басурман}}
+\index{получи\_басурман@{получи\_басурман}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{получи\_басурман}{получи\_басурман}}
+{\footnotesize\ttfamily \#define получи\+\_\+басурман~throw}
+
+\Hypertarget{myh_8h_a6e1ab23dea3ca45b9ac0532716d43f31}\label{myh_8h_a6e1ab23dea3ca45b9ac0532716d43f31} 
+\index{myh.h@{myh.h}!правда@{правда}}
+\index{правда@{правда}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{правда}{правда}}
+{\footnotesize\ttfamily \#define правда~true}
+
+\Hypertarget{myh_8h_a5705d63c3dc0eec0c499eb871be4c7dd}\label{myh_8h_a5705d63c3dc0eec0c499eb871be4c7dd} 
+\index{myh.h@{myh.h}!приказ\_княжий@{приказ\_княжий}}
+\index{приказ\_княжий@{приказ\_княжий}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{приказ\_княжий}{приказ\_княжий}}
+{\footnotesize\ttfamily \#define приказ\+\_\+княжий~const}
+
+\Hypertarget{myh_8h_a4fa162885539f03ce138d7ca7df19757}\label{myh_8h_a4fa162885539f03ce138d7ca7df19757} 
+\index{myh.h@{myh.h}!приток\_Байкала@{приток\_Байкала}}
+\index{приток\_Байкала@{приток\_Байкала}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{приток\_Байкала}{приток\_Байкала}}
+{\footnotesize\ttfamily \#define приток\+\_\+Байкала~ostream}
+
+\Hypertarget{myh_8h_aec02c6ed2a06561d36256560ea314716}\label{myh_8h_aec02c6ed2a06561d36256560ea314716} 
+\index{myh.h@{myh.h}!продвигать@{продвигать}}
+\index{продвигать@{продвигать}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{продвигать}{продвигать}}
+{\footnotesize\ttfamily \#define продвигать~advance}
+
+\Hypertarget{myh_8h_acef7c4e97308a2b7b50d6eb0ae2f13c6}\label{myh_8h_acef7c4e97308a2b7b50d6eb0ae2f13c6} 
+\index{myh.h@{myh.h}!прыг\_скок@{прыг\_скок}}
+\index{прыг\_скок@{прыг\_скок}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{прыг\_скок}{прыг\_скок}}
+{\footnotesize\ttfamily \#define прыг\+\_\+скок~endl}
+
+\Hypertarget{myh_8h_a8a6b35544b7779d5fc89f9aa380c112e}\label{myh_8h_a8a6b35544b7779d5fc89f9aa380c112e} 
+\index{myh.h@{myh.h}!прямой\_список@{прямой\_список}}
+\index{прямой\_список@{прямой\_список}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{прямой\_список}{прямой\_список}}
+{\footnotesize\ttfamily \#define прямой\+\_\+список~forward\+\_\+list}
+
+\Hypertarget{myh_8h_a450fb7d9df41db301538710855e408d4}\label{myh_8h_a450fb7d9df41db301538710855e408d4} 
+\index{myh.h@{myh.h}!путевой\_камень@{путевой\_камень}}
+\index{путевой\_камень@{путевой\_камень}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{путевой\_камень}{путевой\_камень}}
+{\footnotesize\ttfamily \#define путевой\+\_\+камень~switch}
+
+\Hypertarget{myh_8h_aa2415130612292570eb2128fc242ed1b}\label{myh_8h_aa2415130612292570eb2128fc242ed1b} 
+\index{myh.h@{myh.h}!путь@{путь}}
+\index{путь@{путь}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{путь}{путь}}
+{\footnotesize\ttfamily \#define путь~case}
+
+\Hypertarget{myh_8h_a86d22ee3e3537c0bddb9566c0031bd98}\label{myh_8h_a86d22ee3e3537c0bddb9566c0031bd98} 
+\index{myh.h@{myh.h}!пытать\_ящера@{пытать\_ящера}}
+\index{пытать\_ящера@{пытать\_ящера}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{пытать\_ящера}{пытать\_ящера}}
+{\footnotesize\ttfamily \#define пытать\+\_\+ящера~try}
+
+\Hypertarget{myh_8h_a44aab7765ddf23146d21788a19819873}\label{myh_8h_a44aab7765ddf23146d21788a19819873} 
+\index{myh.h@{myh.h}!свет\_мой\_зеркальце@{свет\_мой\_зеркальце}}
+\index{свет\_мой\_зеркальце@{свет\_мой\_зеркальце}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{свет\_мой\_зеркальце}{свет\_мой\_зеркальце}}
+{\footnotesize\ttfamily \#define свет\+\_\+мой\+\_\+зеркальце~template}
+
+\Hypertarget{myh_8h_a73b6f8291b3c26d1133ec41d37a19d9a}\label{myh_8h_a73b6f8291b3c26d1133ec41d37a19d9a} 
+\index{myh.h@{myh.h}!семейство@{семейство}}
+\index{семейство@{семейство}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{семейство}{семейство}}
+{\footnotesize\ttfamily \#define семейство~struct}
+
+\Hypertarget{myh_8h_a8293733d24c1da8592d7759c72980292}\label{myh_8h_a8293733d24c1da8592d7759c72980292} 
+\index{myh.h@{myh.h}!скажи@{скажи}}
+\index{скажи@{скажи}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{скажи}{скажи}}
+{\footnotesize\ttfamily \#define скажи~typename}
+
+\Hypertarget{myh_8h_a8176391956dd8f9916059e5ee4ac7aac}\label{myh_8h_a8176391956dd8f9916059e5ee4ac7aac} 
+\index{myh.h@{myh.h}!сортировать@{сортировать}}
+\index{сортировать@{сортировать}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{сортировать}{сортировать}}
+{\footnotesize\ttfamily \#define сортировать~sort}
+
+\Hypertarget{myh_8h_a30b04c997f32ffdbed4effc9e58fb2f9}\label{myh_8h_a30b04c997f32ffdbed4effc9e58fb2f9} 
+\index{myh.h@{myh.h}!список@{список}}
+\index{список@{список}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{список}{список}}
+{\footnotesize\ttfamily \#define список~list}
+
+\Hypertarget{myh_8h_a7ffd923cbbd45266a7e0776bfb09a2cc}\label{myh_8h_a7ffd923cbbd45266a7e0776bfb09a2cc} 
+\index{myh.h@{myh.h}!стек@{стек}}
+\index{стек@{стек}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{стек}{стек}}
+{\footnotesize\ttfamily \#define стек~stack}
+
+\Hypertarget{myh_8h_ad130a22d834b9c47d4869156db947cae}\label{myh_8h_ad130a22d834b9c47d4869156db947cae} 
+\index{myh.h@{myh.h}!судьба@{судьба}}
+\index{судьба@{судьба}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{судьба}{судьба}}
+{\footnotesize\ttfamily \#define судьба~random}
+
+\Hypertarget{myh_8h_a19336bf93b56a48854913a2ac0e41b2a}\label{myh_8h_a19336bf93b56a48854913a2ac0e41b2a} 
+\index{myh.h@{myh.h}!суд\_Перуна@{суд\_Перуна}}
+\index{суд\_Перуна@{суд\_Перуна}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{суд\_Перуна}{суд\_Перуна}}
+{\footnotesize\ttfamily \#define суд\+\_\+Перуна~auto}
+
+\Hypertarget{myh_8h_af800a6eb4edcdbb7ba83ccae424024e8}\label{myh_8h_af800a6eb4edcdbb7ba83ccae424024e8} 
+\index{myh.h@{myh.h}!считать@{считать}}
+\index{считать@{считать}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{считать}{считать}}
+{\footnotesize\ttfamily \#define считать~count}
+
+\Hypertarget{myh_8h_a2e34304b13c08beead563fc48c38c9f9}\label{myh_8h_a2e34304b13c08beead563fc48c38c9f9} 
+\index{myh.h@{myh.h}!считать\_ли@{считать\_ли}}
+\index{считать\_ли@{считать\_ли}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{считать\_ли}{считать\_ли}}
+{\footnotesize\ttfamily \#define считать\+\_\+ли~count\+\_\+if}
+
+\Hypertarget{myh_8h_a86aa398b05c0c45fd55d47078e1594d0}\label{myh_8h_a86aa398b05c0c45fd55d47078e1594d0} 
+\index{myh.h@{myh.h}!трансформировать@{трансформировать}}
+\index{трансформировать@{трансформировать}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{трансформировать}{трансформировать}}
+{\footnotesize\ttfamily \#define трансформировать~transform}
+
+\Hypertarget{myh_8h_ae0736509d9bb8ef1498fac4c7506b1ba}\label{myh_8h_ae0736509d9bb8ef1498fac4c7506b1ba} 
+\index{myh.h@{myh.h}!туда\_не\_знаю\_куда@{туда\_не\_знаю\_куда}}
+\index{туда\_не\_знаю\_куда@{туда\_не\_знаю\_куда}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{туда\_не\_знаю\_куда}{туда\_не\_знаю\_куда}}
+{\footnotesize\ttfamily \#define туда\+\_\+не\+\_\+знаю\+\_\+куда~nullptr}
+
+\Hypertarget{myh_8h_a1e68db830d18ce9e2a599504630b74f8}\label{myh_8h_a1e68db830d18ce9e2a599504630b74f8} 
+\index{myh.h@{myh.h}!удалить@{удалить}}
+\index{удалить@{удалить}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{удалить}{удалить}}
+{\footnotesize\ttfamily \#define удалить~remove}
+
+\Hypertarget{myh_8h_a5d9f968c10afab58b8f6985cd62207a3}\label{myh_8h_a5d9f968c10afab58b8f6985cd62207a3} 
+\index{myh.h@{myh.h}!удалить\_ли@{удалить\_ли}}
+\index{удалить\_ли@{удалить\_ли}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{удалить\_ли}{удалить\_ли}}
+{\footnotesize\ttfamily \#define удалить\+\_\+ли~remove\+\_\+if}
+
+\Hypertarget{myh_8h_a6435367aa30202625fce9ad4502672a5}\label{myh_8h_a6435367aa30202625fce9ad4502672a5} 
+\index{myh.h@{myh.h}!уникальный@{уникальный}}
+\index{уникальный@{уникальный}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{уникальный}{уникальный}}
+{\footnotesize\ttfamily \#define уникальный~unique}
+
+\Hypertarget{myh_8h_a96820d86faf7f4ef119636d268c6f222}\label{myh_8h_a96820d86faf7f4ef119636d268c6f222} 
+\index{myh.h@{myh.h}!хутор@{хутор}}
+\index{хутор@{хутор}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{хутор}{хутор}}
+{\footnotesize\ttfamily \#define хутор~namespace}
+
+\Hypertarget{myh_8h_a91ee4c18af4b1beb9efeb7b77d31f2df}\label{myh_8h_a91ee4c18af4b1beb9efeb7b77d31f2df} 
+\index{myh.h@{myh.h}!царский@{царский}}
+\index{царский@{царский}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{царский}{царский}}
+{\footnotesize\ttfamily \#define царский~private}
+
+\Hypertarget{myh_8h_af767340336d541f43912cae2bbde68eb}\label{myh_8h_af767340336d541f43912cae2bbde68eb} 
+\index{myh.h@{myh.h}!царь\_батюшка\_главный@{царь\_батюшка\_главный}}
+\index{царь\_батюшка\_главный@{царь\_батюшка\_главный}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{царь\_батюшка\_главный}{царь\_батюшка\_главный}}
+{\footnotesize\ttfamily \#define царь\+\_\+батюшка\+\_\+главный~int main}
+
+\Hypertarget{myh_8h_a2736d1adec6b0e6572a9aa04934004ec}\label{myh_8h_a2736d1adec6b0e6572a9aa04934004ec} 
+\index{myh.h@{myh.h}!читать\_летопись@{читать\_летопись}}
+\index{читать\_летопись@{читать\_летопись}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{читать\_летопись}{читать\_летопись}}
+{\footnotesize\ttfamily \#define читать\+\_\+летопись~ifstream}
+
+\Hypertarget{myh_8h_afd06de28e1c13bb9a268a5bc634d1f0f}\label{myh_8h_afd06de28e1c13bb9a268a5bc634d1f0f} 
+\index{myh.h@{myh.h}!cконец@{cконец}}
+\index{cконец@{cконец}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{cконец}{cконец}}
+{\footnotesize\ttfamily \#define cконец~cend}
+
+\Hypertarget{myh_8h_a06274494110dadefaa46f8d21490bef7}\label{myh_8h_a06274494110dadefaa46f8d21490bef7} 
+\index{myh.h@{myh.h}!cначать@{cначать}}
+\index{cначать@{cначать}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{cначать}{cначать}}
+{\footnotesize\ttfamily \#define cначать~cbegin}
+
+\Hypertarget{myh_8h_a753514b06b72da7f0dbfa254371ee79b}\label{myh_8h_a753514b06b72da7f0dbfa254371ee79b} 
+\index{myh.h@{myh.h}!n\_й\_элемент@{n\_й\_элемент}}
+\index{n\_й\_элемент@{n\_й\_элемент}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{n\_й\_элемент}{n\_й\_элемент}}
+{\footnotesize\ttfamily \#define n\+\_\+й\+\_\+элемент~nth\+\_\+element}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{myh_8h_a1725c8de9cdaf3418842d3e0e80cc7af}\label{myh_8h_a1725c8de9cdaf3418842d3e0e80cc7af} 
+\index{myh.h@{myh.h}!Петр\_Первый@{Петр\_Первый}}
+\index{Петр\_Первый@{Петр\_Первый}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{Петр\_Первый}{Петр\_Первый}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} Петр\+\_\+Первый = long long}
+
+\Hypertarget{myh_8h_a4bbe312df5088b5033c96c1cca332833}\label{myh_8h_a4bbe312df5088b5033c96c1cca332833} 
+\index{myh.h@{myh.h}!бестолочь@{бестолочь}}
+\index{бестолочь@{бестолочь}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{бестолочь}{бестолочь}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} бестолочь = void}
+
+\Hypertarget{myh_8h_a630684ccb37329b5a263c3474871c441}\label{myh_8h_a630684ccb37329b5a263c3474871c441} 
+\index{myh.h@{myh.h}!буква@{буква}}
+\index{буква@{буква}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{буква}{буква}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} буква = char}
+
+\Hypertarget{myh_8h_ad42e5840459b38a8b3b6fbd64b0a2307}\label{myh_8h_ad42e5840459b38a8b3b6fbd64b0a2307} 
+\index{myh.h@{myh.h}!вель\_дробь@{вель\_дробь}}
+\index{вель\_дробь@{вель\_дробь}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{вель\_дробь}{вель\_дробь}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} вель\+\_\+дробь = double}
+
+\Hypertarget{myh_8h_af2f77bc17f79717e842bffea351eb14a}\label{myh_8h_af2f77bc17f79717e842bffea351eb14a} 
+\index{myh.h@{myh.h}!долговязый@{долговязый}}
+\index{долговязый@{долговязый}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{долговязый}{долговязый}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} долговязый = long}
+
+\Hypertarget{myh_8h_a5e1e499dacc8778e2f244b3659b71c5b}\label{myh_8h_a5e1e499dacc8778e2f244b3659b71c5b} 
+\index{myh.h@{myh.h}!карлик@{карлик}}
+\index{карлик@{карлик}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{карлик}{карлик}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} карлик = short}
+
+\Hypertarget{myh_8h_a350debe9ae7e0d0877ea17752671e05b}\label{myh_8h_a350debe9ae7e0d0877ea17752671e05b} 
+\index{myh.h@{myh.h}!малый\_дробь@{малый\_дробь}}
+\index{малый\_дробь@{малый\_дробь}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{малый\_дробь}{малый\_дробь}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} малый\+\_\+дробь = float}
+
+\Hypertarget{myh_8h_a91daf410472b954e16e8aa9a5f4a41e6}\label{myh_8h_a91daf410472b954e16e8aa9a5f4a41e6} 
+\index{myh.h@{myh.h}!мерило@{мерило}}
+\index{мерило@{мерило}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{мерило}{мерило}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} мерило = size\+\_\+t}
+
+\Hypertarget{myh_8h_adc844cac58a054924f6d00c487366950}\label{myh_8h_adc844cac58a054924f6d00c487366950} 
+\index{myh.h@{myh.h}!много\_букав@{много\_букав}}
+\index{много\_букав@{много\_букав}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{много\_букав}{много\_букав}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} много\+\_\+букав = Русь\+::string}
+
+\Hypertarget{myh_8h_a21ba60646a3de62646c07588c5a1e777}\label{myh_8h_a21ba60646a3de62646c07588c5a1e777} 
+\index{myh.h@{myh.h}!розсуд@{розсуд}}
+\index{розсуд@{розсуд}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{розсуд}{розсуд}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} розсуд = bool}
+
+\Hypertarget{myh_8h_a27fb562d01dfa5dada5532eef71420c3}\label{myh_8h_a27fb562d01dfa5dada5532eef71420c3} 
+\index{myh.h@{myh.h}!счёт\_древних\_русов@{счёт\_древних\_русов}}
+\index{счёт\_древних\_русов@{счёт\_древних\_русов}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{счёт\_древних\_русов}{счёт\_древних\_русов}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myh_8h_af0fcf5353fc9dc05ca5f6e9df19419ab}{перепись}} счёт\+\_\+древних\+\_\+русов}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{\ ноль\ =\ 0,\ целковый\ =\ 1,\ полушка\ =\ 2,\ четвертушка\ =\ 3,\ осьмушка\ =\ 4,}
+\DoxyCodeLine{пудовичок\ =\ 5,\ медячок\ =\ 6,\ серебрячок\ =\ 7,\ золотничок\ =\ 8,\ девятичок\ =\ 9,\ десятичок\ =\ 10\ \}}
+
+\end{DoxyCode}
+\Hypertarget{myh_8h_ae072712c87b5379f2212d447043a2224}\label{myh_8h_ae072712c87b5379f2212d447043a2224} 
+\index{myh.h@{myh.h}!целина@{целина}}
+\index{целина@{целина}!myh.h@{myh.h}}
+\doxysubsubsection{\texorpdfstring{целина}{целина}}
+{\footnotesize\ttfamily \mbox{\hyperlink{myh_8h_a0f80fbb392f6d0b92ebdef14a068a7b1}{внедрить}} целина = int}
+
